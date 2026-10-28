@@ -19,4 +19,4 @@ The current migration is an initial design, not independently certified policy, 
 
 ## Hosting
 
-Cloudflare Pages static-preview configuration is in [`CLOUDFLARE_PAGES.md`](CLOUDFLARE_PAGES.md) and `wrangler.toml`; no account, domain, repository connection, or deployment is configured. The local health API is not production hosted. A static `dist/` deployment does not include the API; select and secure a production server runtime (or authorize Neon Functions) before wiring private data. Avoid real data until the security review gates in `SECURITY.md` pass.
+The `main` branch GitHub Actions workflow builds the Vite app and deploys `dist/` to GitHub Pages. In the repository's **Settings → Pages**, select **GitHub Actions** as the build and deployment source. The project-site base path is `/PlayerSmart/`; local development and Cloudflare use `/`. GitHub Pages serves only the static preview: it does not run the AskRef Pages Function or local Node API. For Cloudflare Pages Functions, see [`CLOUDFLARE_PAGES.md`](CLOUDFLARE_PAGES.md) and `wrangler.toml`. Avoid real data until the security review gates in `SECURITY.md` pass.

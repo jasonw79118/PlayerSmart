@@ -63,4 +63,4 @@ Before adding player APIs or schema, use a development branch in the PDSA-owned 
 
 ## Deployment status
 
-Cloudflare Pages configuration is prepared for static preview hosting; no Cloudflare account, domain, secrets, API host, or deployment has been connected. The frontend can be built with `npm run build`; the output in `dist/` is static and contains only public client configuration. Do not enable a public deployment that implies real organizational data access until authentication, RLS, organization provisioning, retention, and privacy review are complete. See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+GitHub Actions builds and deploys the static preview from `main` to GitHub Pages. Configure repository **Settings → Pages → Build and deployment → Source: GitHub Actions** if not already selected. GitHub Pages does not host the AskRef server function or local Node API; Cloudflare account, AI Gateway, and Pages Function bindings are still not connected. The output in `dist/` contains only public client configuration. Do not imply real organizational data access; the app remains a fictional-data prototype. See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
