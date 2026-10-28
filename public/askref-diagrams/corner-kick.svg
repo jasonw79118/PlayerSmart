@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Corner-kick placement</title><desc id="desc">Schematic field. Place the ball in the nearest corner area at the corner where the ball crossed the goal line.</desc>
+  <rect x="35" y="25" width="570" height="370" rx="6" fill="#eaf5e8" stroke="#26734d" stroke-width="4"/><path d="M35 135h110V25M35 135a45 45 0 0 1 45-45M35 25h570M35 395h570" fill="none" stroke="#26734d" stroke-width="3"/><path d="M42 25v-30" stroke="#263238" stroke-width="3"/><circle cx="54" cy="48" r="10" fill="#c62828" stroke="white" stroke-width="4"/><text x="175" y="75" font-family="sans-serif" font-size="18" fill="#173b2b">Nearest corner area</text><text x="320" y="370" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#315d47">Schematic, not to scale · PDSA Law 17</text>
+</svg>

@@ -1,0 +1,44 @@
+{
+  "name": "player-development-platform",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node --env-file=.env.local server/index.mjs",
+    "dev:pages": "npm run build && wrangler pages dev dist --port 5188 --ai AI",
+    "build": "tsc -b && tsc --noEmit --target ES2022 --module ESNext --moduleResolution bundler --lib ES2022,DOM --skipLibCheck functions/api/askref.ts functions/api/me.ts && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@neon/config": "^1.9.5",
+    "@neon/env": "^1.6.6",
+    "@neondatabase/auth": "^0.7.0-beta",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "jose": "^6.2.13",
+    "lucide-react": "^0.468.0",
+    "pg": "^8.23.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "jsdom": "^26.1.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.154.0"
+  },
+  "overrides": {
+    "better-auth": "1.7.14",
+    "zod": "4.6.7"
+  }
+}
