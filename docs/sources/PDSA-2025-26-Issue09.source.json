@@ -1,0 +1,10 @@
+{
+  "sourceUrl": "https://crossbar.s3.amazonaws.com/organizations/1035/uploads/c76604f7-8063-4404-aa0a-86e5f9c0080b.pdf?versionId=f4H7l_ZjFXeughCbE._w4H6JYF59lRrp",
+  "foundVia": "https://www.palodurosoccer.com/about/coaches-resources/48434",
+  "checkedOn": "2026-10-29",
+  "edition": "2025/2026 Issue 09",
+  "checks": [
+    "PDF text pages 8?9, 14?18: goalkeeper table, substitution procedure, equipment, injury clock, kick-ins, goal kicks and free-kick distance"
+  ],
+  "note": "Source text checked; PDF screenshot retrieval failed and no local PDF renderer was available. This is not official answer-bank approval."
+}

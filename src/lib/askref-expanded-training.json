@@ -1,0 +1,1732 @@
+[
+  {
+    "number": 76,
+    "question": "The player's back foot came off the ground during the throw. Is that legal?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "His foot came up",
+      "He lifted his back leg",
+      "Is that a foul throw?"
+    ]
+  },
+  {
+    "number": 77,
+    "question": "What if the player's heel lifted but their toes stayed on the ground?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if the player's heel lifted but their toes stayed on the ground?"
+    ]
+  },
+  {
+    "number": 78,
+    "question": "Can a player cross their legs while taking a throw-in?",
+    "explanation": "Crossed, staggered or side-by-side feet, a running approach or a flip are not automatically illegal. Judge the actual release: face the field, part of both feet grounded on the line or outside it, both hands throwing from behind and over the head, at the correct spot.",
+    "sayToThem": "Your approach is okay if the release meets all the throw-in requirements.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player cross their legs while taking a throw-in?"
+    ]
+  },
+  {
+    "number": 79,
+    "question": "Do both feet have to be side by side?",
+    "explanation": "Crossed, staggered or side-by-side feet, a running approach or a flip are not automatically illegal. Judge the actual release: face the field, part of both feet grounded on the line or outside it, both hands throwing from behind and over the head, at the correct spot.",
+    "sayToThem": "Your approach is okay if the release meets all the throw-in requirements.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Do both feet have to be side by side?"
+    ]
+  },
+  {
+    "number": 80,
+    "question": "Can a player put one foot in front of the other?",
+    "explanation": "Crossed, staggered or side-by-side feet, a running approach or a flip are not automatically illegal. Judge the actual release: face the field, part of both feet grounded on the line or outside it, both hands throwing from behind and over the head, at the correct spot.",
+    "sayToThem": "Your approach is okay if the release meets all the throw-in requirements.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player put one foot in front of the other?"
+    ]
+  },
+  {
+    "number": 81,
+    "question": "Can the thrower step forward?",
+    "explanation": "Crossed, staggered or side-by-side feet, a running approach or a flip are not automatically illegal. Judge the actual release: face the field, part of both feet grounded on the line or outside it, both hands throwing from behind and over the head, at the correct spot.",
+    "sayToThem": "Your approach is okay if the release meets all the throw-in requirements.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can the thrower step forward?"
+    ]
+  },
+  {
+    "number": 82,
+    "question": "Can a player take a running throw-in?",
+    "explanation": "Crossed, staggered or side-by-side feet, a running approach or a flip are not automatically illegal. Judge the actual release: face the field, part of both feet grounded on the line or outside it, both hands throwing from behind and over the head, at the correct spot.",
+    "sayToThem": "Your approach is okay if the release meets all the throw-in requirements.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player take a running throw-in?"
+    ]
+  },
+  {
+    "number": 83,
+    "question": "Can both feet be on the touchline?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can both feet be on the touchline?"
+    ]
+  },
+  {
+    "number": 84,
+    "question": "Can one foot be on the line and the other behind it?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can one foot be on the line and the other behind it?"
+    ]
+  },
+  {
+    "number": 85,
+    "question": "Can both feet be completely outside the field?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can both feet be completely outside the field?"
+    ]
+  },
+  {
+    "number": 86,
+    "question": "What if one foot is completely inside the field without touching the line?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if one foot is completely inside the field without touching the line?"
+    ]
+  },
+  {
+    "number": 87,
+    "question": "The player's toes were inside the field but their heels touched the line. Is that legal?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: The player's toes were inside the field but their heels touched the line. Is that legal?"
+    ]
+  },
+  {
+    "number": 88,
+    "question": "Can the player jump while taking the throw?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "He jumped on the throw",
+      "Can you jump on a throw in?"
+    ]
+  },
+  {
+    "number": 89,
+    "question": "What if the player jumped immediately after releasing the ball?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if the player jumped immediately after releasing the ball?"
+    ]
+  },
+  {
+    "number": 90,
+    "question": "Does the player have to keep both feet completely flat?",
+    "explanation": "At release, part of EACH foot must be on the touchline or on the ground outside it. A foot fully inside without touching the line, or a foot entirely off the ground, fails the requirement. Heels may lift if toes stay grounded correctly; toes may extend into the field if the heel touches the line.",
+    "sayToThem": "Keep part of both feet grounded on the line or outside it when you release the ball.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Does the player have to keep both feet completely flat?"
+    ]
+  },
+  {
+    "number": 91,
+    "question": "Can a player throw with one hand?",
+    "explanation": "Use both hands and throw from behind and over the head. A one-handed delivery or a sideways shoulder throw does not satisfy that procedure. Identify the delivery error rather than calling every unusual technique illegal.",
+    "sayToThem": "Both hands, from behind and over your head.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player throw with one hand?"
+    ]
+  },
+  {
+    "number": 92,
+    "question": "Does the ball have to go behind the player's head?",
+    "explanation": "Use both hands and throw from behind and over the head. A one-handed delivery or a sideways shoulder throw does not satisfy that procedure. Identify the delivery error rather than calling every unusual technique illegal.",
+    "sayToThem": "Both hands, from behind and over your head.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Does the ball have to go behind the player's head?"
+    ]
+  },
+  {
+    "number": 93,
+    "question": "Can the player throw the ball sideways from their shoulder?",
+    "explanation": "Use both hands and throw from behind and over the head. A one-handed delivery or a sideways shoulder throw does not satisfy that procedure. Identify the delivery error rather than calling every unusual technique illegal.",
+    "sayToThem": "Both hands, from behind and over your head.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can the player throw the ball sideways from their shoulder?"
+    ]
+  },
+  {
+    "number": 94,
+    "question": "Does the ball have to travel a certain distance?",
+    "explanation": "There is no minimum throw distance. A proper throw must enter the field; it can be directed downwards and bounce after entering. Simply dropping it does not meet the throwing requirement.",
+    "sayToThem": "Make a proper two-handed throw into the field.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Does the ball have to travel a certain distance?"
+    ]
+  },
+  {
+    "number": 95,
+    "question": "Can the ball be thrown directly at the ground?",
+    "explanation": "There is no minimum throw distance. A proper throw must enter the field; it can be directed downwards and bounce after entering. Simply dropping it does not meet the throwing requirement.",
+    "sayToThem": "Make a proper two-handed throw into the field.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can the ball be thrown directly at the ground?"
+    ]
+  },
+  {
+    "number": 96,
+    "question": "The ball bounced outside the touchline before entering. What happens?",
+    "explanation": "A properly delivered throw that hits the ground outside before entering, or never enters the field, is retaken by the same team at the same spot. This differs from an incorrectly performed throw that enters play.",
+    "sayToThem": "Same team, take it again from the same spot.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Same-team retake for a properly delivered throw that never entered.",
+    "location": "Original throw-in point.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: The ball bounced outside the touchline before entering. What happens?"
+    ]
+  },
+  {
+    "number": 97,
+    "question": "The player threw the ball, but it never crossed into the field. What happens?",
+    "explanation": "A properly delivered throw that hits the ground outside before entering, or never enters the field, is retaken by the same team at the same spot. This differs from an incorrectly performed throw that enters play.",
+    "sayToThem": "Same team, take it again from the same spot.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Same-team retake for a properly delivered throw that never entered.",
+    "location": "Original throw-in point.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: The player threw the ball, but it never crossed into the field. What happens?"
+    ]
+  },
+  {
+    "number": 98,
+    "question": "Can a player throw the ball directly into the goal?",
+    "explanation": "A throw-in cannot score directly. Directly into the opponents’ goal gives a goal kick; directly into the thrower’s own goal gives a corner. A touch by another player changes the situation.",
+    "sayToThem": "A throw cannot score directly.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Goal kick into opponents’ goal; corner into own goal.",
+    "location": "Applicable goal-kick or corner location for the division.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player throw the ball directly into the goal?"
+    ]
+  },
+  {
+    "number": 99,
+    "question": "Can a player throw the ball into their goalkeeper's hands?",
+    "explanation": "PDSA awards an indirect free kick for goalkeeper handling after a deliberate teammate pass-back or teammate throw-in. Do not import an IFAB exception to waive this stated local rule. Outside the penalty area, ordinary handling restrictions apply. Ask the coordinator about an uncertain incident.",
+    "sayToThem": "Under PDSA rules, you cannot handle a teammate’s throw-in directly.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "keeper",
+    "restart": "Indirect free kick for prohibited handling inside own penalty area.",
+    "location": "Handling location, subject to Law 13 exceptions where PDSA is silent.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player throw the ball into their goalkeeper's hands?"
+    ]
+  },
+  {
+    "number": 100,
+    "question": "Can the player who threw the ball touch it immediately again?",
+    "explanation": "After a throw-in enters play, the thrower must wait for another player to touch the ball before touching it again. A normal second touch gives an indirect kick. Handball has separate consequences.",
+    "sayToThem": "Wait for someone else to touch it before playing it again.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Normally indirect free kick for a second touch; handball differs.",
+    "location": "Second-touch location, subject to applicable exceptions.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can the player who threw the ball touch it immediately again?"
+    ]
+  },
+  {
+    "number": 101,
+    "question": "Can a defender stand right in front of the thrower?",
+    "explanation": "Opponents must be at least 2 metres (2 yards in the law’s yard presentation) from the throw-in point. Unfair distraction or interference, including moving too close, is an offence. Under IFAB it brings a caution and, if the throw was taken, an indirect kick; apply PDSA’s no-card rule in the younger divisions.",
+    "sayToThem": "Give the thrower the required space. Do not interfere.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15",
+      "pdsa-law-12-fouls"
+    ],
+    "policy": "throw",
+    "restart": "If the throw was taken, indirect free kick for unfair interference.",
+    "location": "Apply Law 15 and the relevant free-kick location exceptions.",
+    "discipline": "Caution for unfair distraction/interference where cards apply.",
+    "aliases": [
+      "Please explain: Can a defender stand right in front of the thrower?"
+    ]
+  },
+  {
+    "number": 102,
+    "question": "Can an opponent jump and wave their arms to distract the thrower?",
+    "explanation": "Opponents must be at least 2 metres (2 yards in the law’s yard presentation) from the throw-in point. Unfair distraction or interference, including moving too close, is an offence. Under IFAB it brings a caution and, if the throw was taken, an indirect kick; apply PDSA’s no-card rule in the younger divisions.",
+    "sayToThem": "Give the thrower the required space. Do not interfere.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15",
+      "pdsa-law-12-fouls"
+    ],
+    "policy": "throw",
+    "restart": "If the throw was taken, indirect free kick for unfair interference.",
+    "location": "Apply Law 15 and the relevant free-kick location exceptions.",
+    "discipline": "Caution for unfair distraction/interference where cards apply.",
+    "aliases": [
+      "Please explain: Can an opponent jump and wave their arms to distract the thrower?"
+    ]
+  },
+  {
+    "number": 103,
+    "question": "Can a player take the throw several yards away from where the ball went out?",
+    "explanation": "Take the throw-in from the point where the ball left the field, rather than gaining several yards. Correct the location and apply the division’s procedure if an illegal throw has been taken.",
+    "sayToThem": "Back to the spot where the ball went out.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Throw-in at the correct point.",
+    "location": "Point where the whole ball crossed the touchline.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player take the throw several yards away from where the ball went out?"
+    ]
+  },
+  {
+    "number": 104,
+    "question": "Can the referee allow play to continue after an illegal throw?",
+    "explanation": "IFAB’s official FAQ permits advantage after an incorrectly performed throw that enters play if the non-offending team benefits. This is not the rule for a proper throw that never enters the field. Also apply the PDSA division’s teaching-retake procedure.",
+    "sayToThem": "If advantage benefits the other team: “Play on, advantage.”",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can the referee allow play to continue after an illegal throw?"
+    ]
+  },
+  {
+    "number": 105,
+    "question": "Can a player do a flip throw-in?",
+    "explanation": "Crossed, staggered or side-by-side feet, a running approach or a flip are not automatically illegal. Judge the actual release: face the field, part of both feet grounded on the line or outside it, both hands throwing from behind and over the head, at the correct spot.",
+    "sayToThem": "Your approach is okay if the release meets all the throw-in requirements.",
+    "sourceIds": [
+      "pdsa-law-15-throw-in",
+      "IFAB-2025-26-LAW-15"
+    ],
+    "policy": "throw",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player do a flip throw-in?"
+    ]
+  },
+  {
+    "number": 106,
+    "question": "Can a defender take a goal kick instead of the goalkeeper?",
+    "explanation": "Any player of the defending team may take a goal kick; it does not have to be the goalkeeper.",
+    "sayToThem": "A defending player can take the goal kick.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Goal kick.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No card for choosing a defending outfield player.",
+    "aliases": [
+      "Please explain: Can a defender take a goal kick instead of the goalkeeper?"
+    ]
+  },
+  {
+    "number": 107,
+    "question": "Where can the ball be placed for a goal kick?",
+    "explanation": "The general goal-kick location is anywhere within the goal area. PDSA modifies the location for the youngest divisions; use the division-specific placement below.",
+    "sayToThem": "Use the goal-kick spot for this division.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Goal kick.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Where can the ball be placed for a goal kick?"
+    ]
+  },
+  {
+    "number": 108,
+    "question": "Does the goal kick have to leave the penalty area?",
+    "explanation": "A goal kick is in play when kicked and clearly moving; it need not leave the penalty area. A teammate can receive it inside that area. Opponents normally stay outside until it is in play. Quick kicks before opponents can leave have special exceptions; deliberate lingering must not gain an unfair advantage.",
+    "sayToThem": "It is in play once kicked and clearly moving.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Goal kick; retake only when the relevant infringement requires it.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Does the goal kick have to leave the penalty area?"
+    ]
+  },
+  {
+    "number": 109,
+    "question": "Can opponents enter the penalty area before a goal kick?",
+    "explanation": "A goal kick is in play when kicked and clearly moving; it need not leave the penalty area. A teammate can receive it inside that area. Opponents normally stay outside until it is in play. Quick kicks before opponents can leave have special exceptions; deliberate lingering must not gain an unfair advantage.",
+    "sayToThem": "It is in play once kicked and clearly moving.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Goal kick; retake only when the relevant infringement requires it.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can opponents enter the penalty area before a goal kick?"
+    ]
+  },
+  {
+    "number": 110,
+    "question": "Can someone score directly from a goal kick?",
+    "explanation": "A goal kick can score directly into the opponents’ goal. PDSA Law 16 also expressly permits scoring from a goal kick.",
+    "sayToThem": "A goal kick can score directly into the other team’s goal.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Goal followed by kick-off if all scoring conditions are met.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can someone score directly from a goal kick?"
+    ]
+  },
+  {
+    "number": 111,
+    "question": "What happens if a goal kick goes directly into the kicker's own goal?",
+    "explanation": "A goal kick directly into the kicker’s own goal gives a corner to the opponents, rather than an own goal.",
+    "sayToThem": "Directly into your own goal from a goal kick means a corner.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Corner kick to opponents.",
+    "location": "Applicable corner area.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What happens if a goal kick goes directly into the kicker's own goal?"
+    ]
+  },
+  {
+    "number": 112,
+    "question": "Can a teammate receive the goal kick inside the penalty area?",
+    "explanation": "A goal kick is in play when kicked and clearly moving; it need not leave the penalty area. A teammate can receive it inside that area. Opponents normally stay outside until it is in play. Quick kicks before opponents can leave have special exceptions; deliberate lingering must not gain an unfair advantage.",
+    "sayToThem": "It is in play once kicked and clearly moving.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16"
+    ],
+    "policy": "goal",
+    "restart": "Goal kick; retake only when the relevant infringement requires it.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a teammate receive the goal kick inside the penalty area?"
+    ]
+  },
+  {
+    "number": 113,
+    "question": "Can the goalkeeper pick up the ball after taking a goal kick?",
+    "explanation": "A player taking a goal kick cannot play it again until another player touches it. A goalkeeper handling that second touch inside their own penalty area normally gives an indirect kick; outside it, ordinary handball consequences apply. A second-touch offence stopping a promising attack or denying a clear scoring opportunity can also require discipline.",
+    "sayToThem": "Wait for another player to touch it before playing it again.",
+    "sourceIds": [
+      "pdsa-law-16-goal-kick",
+      "IFAB-2025-26-LAW-16",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "keeper",
+    "restart": "Normally indirect kick for goalkeeper second-touch handling inside own area.",
+    "location": "Offence location, subject to Law 13 exceptions.",
+    "discipline": "May require a card for stopping an attack or denying an obvious scoring opportunity.",
+    "aliases": [
+      "Please explain: Can the goalkeeper pick up the ball after taking a goal kick?"
+    ]
+  },
+  {
+    "number": 114,
+    "question": "Does the ball have to be completely inside the corner arc?",
+    "explanation": "The whole ball does not need to sit completely inside the corner arc. Part may touch or overhang the boundary of the corner area. The ball must be stationary in the correct corner area.",
+    "sayToThem": "Part of the ball may touch or overhang the arc.",
+    "sourceIds": [
+      "pdsa-law-17-corner",
+      "IFAB-2025-26-LAW-17"
+    ],
+    "policy": "none",
+    "restart": "Corner kick.",
+    "location": "Corner area nearest the exit point.",
+    "discipline": "No card for a correctly positioned ball.",
+    "aliases": [
+      "Please explain: Does the ball have to be completely inside the corner arc?"
+    ]
+  },
+  {
+    "number": 115,
+    "question": "Can players move the corner flag to make room?",
+    "explanation": "Do not move the corner flag to make room for a kick. PDSA also says referees must not hold or move it during the corner.",
+    "sayToThem": "Leave the corner flag in place.",
+    "sourceIds": [
+      "pdsa-law-17-corner",
+      "IFAB-2025-26-LAW-17"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can players move the corner flag to make room?"
+    ]
+  },
+  {
+    "number": 116,
+    "question": "How far away must opponents stand on a corner kick?",
+    "explanation": "Opponents stay at least 10 yards from the corner arc until the ball is in play under the adopted IFAB rule. PDSA’s 4/8-yard modification is for free-kick walls; it must not automatically be applied to corners.",
+    "sayToThem": "Stay the required distance from the corner arc.",
+    "sourceIds": [
+      "pdsa-law-17-corner",
+      "IFAB-2025-26-LAW-17"
+    ],
+    "policy": "none",
+    "restart": "Corner kick.",
+    "location": "Distance measured from the corner arc.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: How far away must opponents stand on a corner kick?"
+    ]
+  },
+  {
+    "number": 117,
+    "question": "Can a corner kick be passed backward?",
+    "explanation": "A corner can be passed backwards or sideways. The ball is in play when kicked and clearly moving; it does not need to leave the corner area.",
+    "sayToThem": "The corner may go in any direction.",
+    "sourceIds": [
+      "pdsa-law-17-corner",
+      "IFAB-2025-26-LAW-17"
+    ],
+    "policy": "none",
+    "restart": "Corner kick.",
+    "location": "Correct corner area.",
+    "discipline": "No card for direction alone.",
+    "aliases": [
+      "Please explain: Can a corner kick be passed backward?"
+    ]
+  },
+  {
+    "number": 118,
+    "question": "Can a player score directly from a free kick?",
+    "explanation": "A direct free kick can score straight into the opponents’ goal. An indirect kick needs another player’s touch before a goal can count. The raised arm signals an indirect kick. PDSA’s youngest divisions use indirect kicks for fouls.",
+    "sayToThem": "Arm up means indirect: another player must touch it before a goal counts.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "pdsa-law-13-free-kicks",
+      "IFAB-2025-26-LAW-13"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player score directly from a free kick?"
+    ]
+  },
+  {
+    "number": 119,
+    "question": "Why is the referee holding one arm in the air?",
+    "explanation": "A direct free kick can score straight into the opponents’ goal. An indirect kick needs another player’s touch before a goal can count. The raised arm signals an indirect kick. PDSA’s youngest divisions use indirect kicks for fouls.",
+    "sayToThem": "Arm up means indirect: another player must touch it before a goal counts.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "pdsa-law-13-free-kicks",
+      "IFAB-2025-26-LAW-13"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Why is the referee holding one arm in the air?"
+    ]
+  },
+  {
+    "number": 120,
+    "question": "How far must defenders stand from a free kick?",
+    "explanation": "Use PDSA’s free-kick wall distance, rather than automatically using the adult IFAB ten-yard distance.",
+    "sayToThem": "Use this division’s free-kick distance.",
+    "sourceIds": [
+      "pdsa-law-13-free-kicks"
+    ],
+    "policy": "wall",
+    "restart": "Free kick.",
+    "location": "Division-specific wall distance from the ball.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "How far back is the wall?"
+    ]
+  },
+  {
+    "number": 121,
+    "question": "Can a player slide tackle?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: Can a player slide tackle?"
+    ]
+  },
+  {
+    "number": 122,
+    "question": "What if a player slides into someone but touches the ball first?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: What if a player slides into someone but touches the ball first?"
+    ]
+  },
+  {
+    "number": 123,
+    "question": "Can a player shield the ball using their body?",
+    "explanation": "A player may shield a ball within playing distance by placing their body between it and an opponent. They may not hold the opponent off with their arms or body. Being in a position is different from moving to obstruct a player when the ball is not within playing distance.",
+    "sayToThem": "You can shield a playable ball, but do not hold or push.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player shield the ball using their body?"
+    ]
+  },
+  {
+    "number": 124,
+    "question": "Can a player push someone away using their arms?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: Can a player push someone away using their arms?"
+    ]
+  },
+  {
+    "number": 125,
+    "question": "Can a player put an arm across an opponent's body?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: Can a player put an arm across an opponent's body?"
+    ]
+  },
+  {
+    "number": 126,
+    "question": "Is it a foul if two players collide?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: Is it a foul if two players collide?"
+    ]
+  },
+  {
+    "number": 127,
+    "question": "Can a player kick the ball above their head?",
+    "explanation": "A high or bicycle kick, falling on the ball or trapping it between the legs is not automatically an offence. Judge whether the action threatens injury or prevents a nearby opponent playing through fear of injury. Dangerous play without contact normally gives an indirect kick; contact can produce a different foul.",
+    "sayToThem": "You may play the ball if you can do it safely.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Indirect kick for dangerous play without contact; contact offences can differ.",
+    "location": "Offence location, subject to applicable exceptions.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player kick the ball above their head?"
+    ]
+  },
+  {
+    "number": 128,
+    "question": "Is a high kick always a foul?",
+    "explanation": "A high or bicycle kick, falling on the ball or trapping it between the legs is not automatically an offence. Judge whether the action threatens injury or prevents a nearby opponent playing through fear of injury. Dangerous play without contact normally gives an indirect kick; contact can produce a different foul.",
+    "sayToThem": "You may play the ball if you can do it safely.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Indirect kick for dangerous play without contact; contact offences can differ.",
+    "location": "Offence location, subject to applicable exceptions.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Is a high kick always a foul?"
+    ]
+  },
+  {
+    "number": 129,
+    "question": "Can a player use their knee to control the ball?",
+    "explanation": "Using the knee, chest or stomach to control the ball is normally legal. Judge any separate dangerous play or other offence; these body parts are not hand/arm contact.",
+    "sayToThem": "Knee, chest and stomach control are allowed if the play is safe.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "none",
+    "restart": "Play continues if no separate offence.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No card for legal control.",
+    "aliases": [
+      "Please explain: Can a player use their knee to control the ball?"
+    ]
+  },
+  {
+    "number": 130,
+    "question": "Can a player use their chest or stomach to control the ball?",
+    "explanation": "Using the knee, chest or stomach to control the ball is normally legal. Judge any separate dangerous play or other offence; these body parts are not hand/arm contact.",
+    "sayToThem": "Knee, chest and stomach control are allowed if the play is safe.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "none",
+    "restart": "Play continues if no separate offence.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No card for legal control.",
+    "aliases": [
+      "Please explain: Can a player use their chest or stomach to control the ball?"
+    ]
+  },
+  {
+    "number": 131,
+    "question": "Is it a foul to fall on the ball?",
+    "explanation": "A high or bicycle kick, falling on the ball or trapping it between the legs is not automatically an offence. Judge whether the action threatens injury or prevents a nearby opponent playing through fear of injury. Dangerous play without contact normally gives an indirect kick; contact can produce a different foul.",
+    "sayToThem": "You may play the ball if you can do it safely.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Indirect kick for dangerous play without contact; contact offences can differ.",
+    "location": "Offence location, subject to applicable exceptions.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Is it a foul to fall on the ball?"
+    ]
+  },
+  {
+    "number": 132,
+    "question": "Can a player trap the ball between their legs?",
+    "explanation": "A high or bicycle kick, falling on the ball or trapping it between the legs is not automatically an offence. Judge whether the action threatens injury or prevents a nearby opponent playing through fear of injury. Dangerous play without contact normally gives an indirect kick; contact can produce a different foul.",
+    "sayToThem": "You may play the ball if you can do it safely.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Indirect kick for dangerous play without contact; contact offences can differ.",
+    "location": "Offence location, subject to applicable exceptions.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player trap the ball between their legs?"
+    ]
+  },
+  {
+    "number": 133,
+    "question": "What if a player kicks another player's foot while trying to kick the ball?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: What if a player kicks another player's foot while trying to kick the ball?"
+    ]
+  },
+  {
+    "number": 134,
+    "question": "What if a player trips over another player's foot?",
+    "explanation": "Judge the action and its safety, not just who got the ball first or whether someone fell. A slide, collision or arm position is not automatically a foul. Careless, reckless or excessively forceful kicks, trips, pushes and challenges, holding or unfair impeding can be offences. Confirm any additional local slide-tackle restrictions with the coordinator.",
+    "sayToThem": "Explain the actual action you judged, for example: “That challenge tripped the player.”",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the offence, contact and location; apply the local division rule.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Careless: normally no card. Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: What if a player trips over another player's foot?"
+    ]
+  },
+  {
+    "number": 135,
+    "question": "Can the referee call a foul against both players?",
+    "explanation": "Identify whether offences happened together or one after another. For simultaneous offences the referee punishes the more serious one, considering sanction, restart, physical severity and tactical impact. Do not invent two conflicting restarts.",
+    "sayToThem": "Let me establish what happened first and the more serious offence.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-5",
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Depends on each established offence.",
+    "aliases": [
+      "Please explain: Can the referee call a foul against both players?"
+    ]
+  },
+  {
+    "number": 136,
+    "question": "What if a player deliberately blocks an opponent who doesn't have the ball?",
+    "explanation": "Moving into an opponent’s path to block progress when the ball is not within playing distance can be impeding. Without contact it normally gives an indirect kick; with contact it can give a direct kick. Merely occupying an existing position is different.",
+    "sayToThem": "You may hold your position, but not move to block an opponent unfairly.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Indirect without contact; direct with contact, subject to PDSA division modifications.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if a player deliberately blocks an opponent who doesn't have the ball?"
+    ]
+  },
+  {
+    "number": 137,
+    "question": "What happens if someone spits at another player?",
+    "explanation": "Spitting at another person is a sending-off offence under adopted IFAB rules where cards apply. Get coordinator support and protect the young referee’s safety. PDSA’s youngest divisions do not award cards, so involve the responsible league official for serious misconduct.",
+    "sayToThem": "Stop. I am getting the coordinator to help handle this safely.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "cards",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Sending-off for spitting where cards apply; coordinator support in no-card divisions.",
+    "aliases": [
+      "Please explain: What happens if someone spits at another player?"
+    ]
+  },
+  {
+    "number": 138,
+    "question": "Can a player yell to distract someone?",
+    "explanation": "Deliberately using the voice to distract an opponent during play or a restart can be unsporting behaviour and a caution where cards apply. Normal useful team communication is not automatically an offence.",
+    "sayToThem": "Use your voice to communicate, not to unfairly distract opponents.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "cards",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Caution for established verbal distraction where cards apply.",
+    "aliases": [
+      "Please explain: Can a player yell to distract someone?"
+    ]
+  },
+  {
+    "number": 139,
+    "question": "Can a player try a bicycle kick?",
+    "explanation": "A high or bicycle kick, falling on the ball or trapping it between the legs is not automatically an offence. Judge whether the action threatens injury or prevents a nearby opponent playing through fear of injury. Dangerous play without contact normally gives an indirect kick; contact can produce a different foul.",
+    "sayToThem": "You may play the ball if you can do it safely.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Indirect kick for dangerous play without contact; contact offences can differ.",
+    "location": "Offence location, subject to applicable exceptions.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player try a bicycle kick?"
+    ]
+  },
+  {
+    "number": 140,
+    "question": "Why did you give a yellow card when the tackle wasn't intentional?",
+    "explanation": "A reckless challenge can require a yellow card even without an intention to hurt. Intent alone does not settle the sanction. Excessive force or endangering safety can require a red card; a careless challenge normally needs no card.",
+    "sayToThem": "The caution is for the reckless challenge, if that is what you judged.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "cards",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Reckless: caution. Excessive force/endangering safety: sending-off where cards apply.",
+    "aliases": [
+      "Please explain: Why did you give a yellow card when the tackle wasn't intentional?"
+    ]
+  },
+  {
+    "number": 141,
+    "question": "Can a player enter the field without the referee's permission?",
+    "explanation": "Follow the division’s substitution procedure. U6 allows substitutions anytime. Older divisions use the specified stoppages, with substitutes waiting at midfield and entering when summoned; do not let a moving ball alone decide whether a permitted window exists.",
+    "sayToThem": "Wait for the permitted opportunity and entry signal.",
+    "sourceIds": [
+      "pdsa-law-3-players",
+      "IFAB-2025-26-LAW-3"
+    ],
+    "policy": "subs",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player enter the field without the referee's permission?"
+    ]
+  },
+  {
+    "number": 142,
+    "question": "Can a coach substitute a player while the ball is moving?",
+    "explanation": "Follow the division’s substitution procedure. U6 allows substitutions anytime. Older divisions use the specified stoppages, with substitutes waiting at midfield and entering when summoned; do not let a moving ball alone decide whether a permitted window exists.",
+    "sayToThem": "Wait for the permitted opportunity and entry signal.",
+    "sourceIds": [
+      "pdsa-law-3-players",
+      "IFAB-2025-26-LAW-3"
+    ],
+    "policy": "subs",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a coach substitute a player while the ball is moving?"
+    ]
+  },
+  {
+    "number": 143,
+    "question": "Can players switch positions during play?",
+    "explanation": "Outfield players may switch playing positions without a substitution. A goalkeeper change requires informing the referee and a stoppage. Apply the approved team format and division’s goalkeeper rules.",
+    "sayToThem": "Outfield positions may change; tell me before a goalkeeper change at a stoppage.",
+    "sourceIds": [
+      "pdsa-law-3-players",
+      "IFAB-2025-26-LAW-3"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can players switch positions during play?"
+    ]
+  },
+  {
+    "number": 144,
+    "question": "Can a player play without shin guards?",
+    "explanation": "Shin guards are required and must provide suitable protection, covered by socks. Correct missing equipment before allowing participation under the equipment procedure.",
+    "sayToThem": "You need suitable shin guards under your socks.",
+    "sourceIds": [
+      "pdsa-law-4-equipment",
+      "IFAB-2025-26-LAW-4"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Missing equipment is not automatically a card; refusal or other conduct can change the sanction.",
+    "aliases": [
+      "Please explain: Can a player play without shin guards?"
+    ]
+  },
+  {
+    "number": 145,
+    "question": "Can a player wear earrings if they're covered with tape?",
+    "explanation": "PDSA Law 4 permits small stud earrings covered with tape or equivalent. Other jewellery exceptions require Referee Coordinator or Board approval. Do not replace that local provision with a blanket IFAB prohibition. Refer unclear equipment or safety concerns to those officials; tape is not general permission for all jewellery.",
+    "sayToThem": "PDSA permits covered small studs. Let me confirm any other equipment or safety concern.",
+    "sourceIds": [
+      "pdsa-law-4-equipment"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "Confirm any required equipment approval; no automatic card from this question alone.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Are taped earrings allowed?",
+      "Can she play with taped stud earrings?"
+    ]
+  },
+  {
+    "number": 146,
+    "question": "Can a player wear glasses?",
+    "explanation": "Safe sports spectacles are permitted under IFAB equipment rules. Inspect safety; ordinary glasses are not automatically approved just because they are glasses. Follow applicable PDSA equipment approvals.",
+    "sayToThem": "I need to check that the eyewear is safe.",
+    "sourceIds": [
+      "pdsa-law-4-equipment",
+      "IFAB-2025-26-LAW-4"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player wear glasses?"
+    ]
+  },
+  {
+    "number": 147,
+    "question": "Can a player wear a medical bracelet?",
+    "explanation": "Do not assume a medical bracelet is automatically exempt. PDSA’s jewellery and approval rules still need to be followed. Ask the Referee Coordinator or Board Member to confirm the permitted safe arrangement.",
+    "sayToThem": "Let me get the coordinator’s equipment decision.",
+    "sourceIds": [
+      "pdsa-law-4-equipment",
+      "IFAB-2025-26-LAW-4"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: Can a player wear a medical bracelet?"
+    ]
+  },
+  {
+    "number": 148,
+    "question": "What if a player's shoe comes off during play?",
+    "explanation": "A player who accidentally loses footwear must replace it as soon as possible and no later than the next stoppage. An immediate play or goal before correcting it can remain valid. Stop if there is a separate safety reason; deliberate play without required footwear is a different situation.",
+    "sayToThem": "Put your shoe back on as soon as possible, no later than the next stoppage.",
+    "sourceIds": [
+      "pdsa-law-4-equipment",
+      "IFAB-2025-26-LAW-4"
+    ],
+    "policy": "none",
+    "restart": "Play need not stop solely for accidentally lost footwear.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card for accidental footwear loss.",
+    "aliases": [
+      "Please explain: What if a player's shoe comes off during play?"
+    ]
+  },
+  {
+    "number": 149,
+    "question": "Can a player wear a baseball cap?",
+    "explanation": "IFAB permits a safe goalkeeper’s cap. Other headgear must meet its safety requirements; this is not blanket permission for every player to wear a baseball cap. Apply PDSA equipment decisions.",
+    "sayToThem": "A safe goalkeeper’s cap may be allowed; let me check the equipment.",
+    "sourceIds": [
+      "pdsa-law-4-equipment",
+      "IFAB-2025-26-LAW-4"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player wear a baseball cap?"
+    ]
+  },
+  {
+    "number": 150,
+    "question": "Can a player wear a cast or brace?",
+    "explanation": "PDSA requires hard casts, braces or exposed hard material to be approved by a Board Member, Commissioner or Referee Coordinator, with an approved protective padding layer. The referee should confirm that approval and safety.",
+    "sayToThem": "We need the required approval and protective padding.",
+    "sourceIds": [
+      "pdsa-law-4-equipment"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: Can a player wear a cast or brace?"
+    ]
+  },
+  {
+    "number": 151,
+    "question": "What if the ball hits the referee?",
+    "explanation": "Referee contact does not always stop play. If the ball remains on the field and a promising attack, direct goal or possession change results, stop and use a dropped ball. Otherwise play normally continues; if it leaves the field, decide the exit restart from the last player touch.",
+    "sayToThem": "What happened after the contact determines the restart.",
+    "sourceIds": [
+      "pdsa-law-9-ball-play",
+      "IFAB-2025-26-LAW-9",
+      "IFAB-2025-26-LAW-8"
+    ],
+    "policy": "none",
+    "restart": "Dropped ball only for the listed referee-contact outcomes.",
+    "location": "Recipient and location depend on the adopted Law 8 circumstances.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if the ball hits the referee?"
+    ]
+  },
+  {
+    "number": 152,
+    "question": "What if the ball hits the goalpost and comes back?",
+    "explanation": "A rebound from a goalpost, crossbar or corner flag stays in play if the whole ball remains within the field and no separate reason has stopped play.",
+    "sayToThem": "Still in the field: play on.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-9"
+    ],
+    "policy": "none",
+    "restart": "Play continues unless another reason requires stopping.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No card for the rebound itself.",
+    "aliases": [
+      "Please explain: What if the ball hits the goalpost and comes back?"
+    ]
+  },
+  {
+    "number": 153,
+    "question": "What if the ball hits the corner flag and stays in?",
+    "explanation": "A rebound from a goalpost, crossbar or corner flag stays in play if the whole ball remains within the field and no separate reason has stopped play.",
+    "sayToThem": "Still in the field: play on.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-9"
+    ],
+    "policy": "none",
+    "restart": "Play continues unless another reason requires stopping.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No card for the rebound itself.",
+    "aliases": [
+      "Please explain: What if the ball hits the corner flag and stays in?"
+    ]
+  },
+  {
+    "number": 154,
+    "question": "What if a second ball rolls onto the field?",
+    "explanation": "An extra ball or spectator does not automatically require stopping if there is no interference. Stop for interference or a safety threat and get responsible league help when needed. Determine the proper restart; a ball already entering goal has specific exceptions, so do not automatically erase every goal.",
+    "sayToThem": "Keep clear of the field. I am getting league help if needed.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-5",
+      "IFAB-2025-26-LAW-8",
+      "pdsa-law-5-referee"
+    ],
+    "policy": "none",
+    "restart": "Depends on interference and whether play was already stopped.",
+    "location": "Confirm the applicable Law 8 procedure; do not guess.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if a second ball rolls onto the field?"
+    ]
+  },
+  {
+    "number": 155,
+    "question": "What if a spectator walks onto the field?",
+    "explanation": "An extra ball or spectator does not automatically require stopping if there is no interference. Stop for interference or a safety threat and get responsible league help when needed. Determine the proper restart; a ball already entering goal has specific exceptions, so do not automatically erase every goal.",
+    "sayToThem": "Keep clear of the field. I am getting league help if needed.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-5",
+      "IFAB-2025-26-LAW-8",
+      "pdsa-law-5-referee"
+    ],
+    "policy": "none",
+    "restart": "Depends on interference and whether play was already stopped.",
+    "location": "Confirm the applicable Law 8 procedure; do not guess.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if a spectator walks onto the field?"
+    ]
+  },
+  {
+    "number": 156,
+    "question": "What if the goal falls over or becomes unsafe?",
+    "explanation": "Stop play for an unsafe or fallen goal, keep players clear and get responsible adults to secure or repair it. Do not resume until safe. IFAB requires goals to be firmly secured; a broken crossbar that cannot be repaired requires abandonment.",
+    "sayToThem": "Stop. Stay away from the goal until it is made safe.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-1",
+      "IFAB-2025-26-LAW-5",
+      "pdsa-law-5-referee"
+    ],
+    "policy": "none",
+    "restart": "Establish why play stopped and the applicable repair/restart procedure.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if the goal falls over or becomes unsafe?"
+    ]
+  },
+  {
+    "number": 157,
+    "question": "Can a player leave the field to get around a defender?",
+    "explanation": "Temporarily leaving the field as part of a playing movement is not automatically an offence. Deliberately leaving or re-entering to gain an unfair advantage, avoid offside or evade the referee’s permission procedure can be a different matter.",
+    "sayToThem": "A temporary playing movement off the field is not automatically an offence.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-3",
+      "IFAB-2025-26-LAW-11"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player leave the field to get around a defender?"
+    ]
+  },
+  {
+    "number": 158,
+    "question": "Can a player deliberately kick the ball out so someone can receive treatment?",
+    "explanation": "A player can put the ball out to allow attention to an injury. Stop yourself for a serious injury rather than waiting for this courtesy. If the ball goes out first, use the normal exit restart; do not invent a special compulsory give-back restart.",
+    "sayToThem": "We will use the restart for how the ball left play.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-5",
+      "pdsa-law-9-ball-play"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player deliberately kick the ball out so someone can receive treatment?"
+    ]
+  },
+  {
+    "number": 159,
+    "question": "What if a team refuses to continue playing?",
+    "explanation": "Do not force a team to participate or argue with the coach. Involve the Referee Coordinator or responsible PDSA official, record the facts and follow the league’s suspension or abandonment procedure. Do not invent a forfeit score.",
+    "sayToThem": "I am contacting the league official to confirm the procedure.",
+    "sourceIds": [
+      "pdsa-law-5-referee",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if a team refuses to continue playing?"
+    ]
+  },
+  {
+    "number": 160,
+    "question": "What if a coach comes onto the field without permission?",
+    "explanation": "Establish why the coach entered and whether they interfered or threatened safety. PDSA expressly permits one U6 coach on the field. Other entries must follow the relevant permission and team-official procedure; get coordinator support rather than assuming every entry has the same sanction.",
+    "sayToThem": "Coach, please follow this division’s field-entry procedure.",
+    "sourceIds": [
+      "pdsa-law-1-field",
+      "pdsa-law-5-referee",
+      "IFAB-2025-26-LAW-3",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "coach",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if a coach comes onto the field without permission?"
+    ]
+  },
+  {
+    "number": 161,
+    "question": "Can the referee change a call after the whistle?",
+    "explanation": "A whistle does not make every decision unchangeable. An eligible mistake can be corrected before play restarts, within Law 5’s limits. Restart decisions generally cannot be changed after restarting, after ending a half and leaving the field, or after abandoning. PDSA’s signed-scorecard finality does not override these earlier limits.",
+    "sayToThem": "Let me check with my assistant before the restart.",
+    "sourceIds": [
+      "pdsa-law-5-referee",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can the referee change a call after the whistle?"
+    ]
+  },
+  {
+    "number": 162,
+    "question": "What if the referee accidentally blows the whistle?",
+    "explanation": "An accidental whistle stops play. If there was no other applicable restart reason, a dropped ball is normally needed. Establish whether the ball was already out or another offence had already determined the restart; do not assume a generic dropped-ball recipient or location.",
+    "sayToThem": "I stopped play accidentally. Let me confirm the correct restart.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-8",
+      "IFAB-2025-26-LAW-9",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Normally dropped ball if play stopped only for the accidental whistle.",
+    "location": "Apply the adopted Law 8 recipient and location procedure.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if the referee accidentally blows the whistle?"
+    ]
+  },
+  {
+    "number": 163,
+    "question": "What if the game ball becomes flat?",
+    "explanation": "Replace a defective ball with the referee’s permission. If it becomes defective during open play, stop and restart with a dropped ball. If it becomes defective at a restart, that restart is retaken; a penalty becoming defective in flight has a specific retake rule.",
+    "sayToThem": "We need a sound ball. I will confirm the restart from when it became defective.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-2",
+      "IFAB-2025-26-LAW-8"
+    ],
+    "policy": "none",
+    "restart": "Dropped ball during open play; original restart retaken when applicable.",
+    "location": "Depends on when and where the defect occurred.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if the game ball becomes flat?"
+    ]
+  },
+  {
+    "number": 164,
+    "question": "What if the referee didn't see who touched the ball last?",
+    "explanation": "Consult the assistant if available and use the information actually observed. Do not claim certainty, invent a last touch or invent a coin-toss procedure. Seek an experienced official’s help if still unsure about the applicable rule or procedure.",
+    "sayToThem": "Let me check with my assistant.",
+    "sourceIds": [
+      "pdsa-law-5-referee",
+      "pdsa-law-6-officials",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if the referee didn't see who touched the ball last?"
+    ]
+  },
+  {
+    "number": 165,
+    "question": "Can a referee give a yellow card to a coach?",
+    "explanation": "Where cards apply, a coach can receive a yellow for qualifying misconduct, and a red can be given directly for a sending-off offence without a previous yellow. Judge the actual conduct and applicable team-official provisions. Apply PDSA’s division modifications and get support for serious misconduct.",
+    "sayToThem": "A direct red does not require an earlier yellow. I will explain the misconduct judged.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "cards",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a referee give a yellow card to a coach?"
+    ]
+  },
+  {
+    "number": 166,
+    "question": "Can you penalize my player when the ball is already out?",
+    "explanation": "Misconduct can be dealt with while the ball is out. The restart normally stays the one already required; a later off-the-ball incident does not turn a prior exit into a penalty kick. Apply the appropriate division’s discipline rules.",
+    "sayToThem": "The misconduct and the restart are separate decisions.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "cards",
+    "restart": "Normally retain the restart already required when the ball went out.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can you penalize my player when the ball is already out?"
+    ]
+  },
+  {
+    "number": 167,
+    "question": "Why didn't you call that foul against the goalkeeper?",
+    "explanation": "Goalkeepers can commit ordinary fouls. Their protection while controlling the ball with the hands does not excuse an illegal challenge. Ask what action and location were observed before deciding a particular case.",
+    "sayToThem": "I will judge the actual challenge, including the goalkeeper’s action.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "foul",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Why didn't you call that foul against the goalkeeper?"
+    ]
+  },
+  {
+    "number": 168,
+    "question": "Is every handball in the penalty area a penalty?",
+    "explanation": "First establish an actual offence and its location while the ball is in play. Not every ball-to-arm contact is handball. A defender’s direct-kick offence inside their own penalty area gives a penalty; an offence outside does not become a penalty because a player then falls inside. Goalkeeper handling offences inside their own area are distinct.",
+    "sayToThem": "The offence and where it happened decide the restart.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12",
+      "pdsa-law-14-penalty"
+    ],
+    "policy": "foul",
+    "restart": "Direct or penalty kick only if the offence and location require it; younger PDSA divisions differ.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Is every handball in the penalty area a penalty?"
+    ]
+  },
+  {
+    "number": 169,
+    "question": "Why is a tackle outside the penalty area only a free kick?",
+    "explanation": "First establish an actual offence and its location while the ball is in play. Not every ball-to-arm contact is handball. A defender’s direct-kick offence inside their own penalty area gives a penalty; an offence outside does not become a penalty because a player then falls inside. Goalkeeper handling offences inside their own area are distinct.",
+    "sayToThem": "The offence and where it happened decide the restart.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12",
+      "pdsa-law-14-penalty"
+    ],
+    "policy": "foul",
+    "restart": "Direct or penalty kick only if the offence and location require it; younger PDSA divisions differ.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Why is a tackle outside the penalty area only a free kick?"
+    ]
+  },
+  {
+    "number": 170,
+    "question": "Can a referee give a red card without first giving a yellow?",
+    "explanation": "Where cards apply, a coach can receive a yellow for qualifying misconduct, and a red can be given directly for a sending-off offence without a previous yellow. Judge the actual conduct and applicable team-official provisions. Apply PDSA’s division modifications and get support for serious misconduct.",
+    "sayToThem": "A direct red does not require an earlier yellow. I will explain the misconduct judged.",
+    "sourceIds": [
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "cards",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a referee give a red card without first giving a yellow?"
+    ]
+  },
+  {
+    "number": 171,
+    "question": "Can a player score after the referee has blown the whistle?",
+    "explanation": "Once play is stopped, a later ball crossing cannot count as a goal. If it had already wholly crossed legally before the whistle, the timing may permit a goal. Establish the sequence rather than assuming every whistle cancels an earlier goal.",
+    "sayToThem": "We need to establish whether the whole ball crossed before play stopped.",
+    "sourceIds": [
+      "pdsa-law-9-ball-play",
+      "pdsa-law-10-goals",
+      "IFAB-2025-26-LAW-9"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: Can a player score after the referee has blown the whistle?"
+    ]
+  },
+  {
+    "number": 172,
+    "question": "What if two players from the same team accidentally collide?",
+    "explanation": "An accidental collision between teammates is not automatically a foul. Stop for serious injury or another valid safety reason, then choose the restart from why play stopped.",
+    "sayToThem": "I am checking player safety; the collision alone is not automatically a foul.",
+    "sourceIds": [
+      "IFAB-2025-26-LAW-5",
+      "pdsa-law-12-fouls",
+      "IFAB-2025-26-LAW-12"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "aliases": [
+      "Please explain: What if two players from the same team accidentally collide?"
+    ]
+  },
+  {
+    "number": 173,
+    "question": "Can the referee stop the game because a parent is threatening a player or official?",
+    "explanation": "Safety and correct procedure come first. Stop or suspend when a threat requires it and seek a responsible PDSA official’s help; a young referee should not confront a threatening adult alone. Coaches cannot independently dismiss an appointed official. For an unfamiliar rule, consult the adopted source or referee mentor instead of inventing a ruling, and record unresolved concerns for the coordinator.",
+    "sayToThem": "I am getting the Referee Coordinator or responsible league official to help.",
+    "sourceIds": [
+      "pdsa-law-5-referee",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: Can the referee stop the game because a parent is threatening a player or official?"
+    ]
+  },
+  {
+    "number": 174,
+    "question": "Can a coach demand that a young referee be replaced?",
+    "explanation": "Safety and correct procedure come first. Stop or suspend when a threat requires it and seek a responsible PDSA official’s help; a young referee should not confront a threatening adult alone. Coaches cannot independently dismiss an appointed official. For an unfamiliar rule, consult the adopted source or referee mentor instead of inventing a ruling, and record unresolved concerns for the coordinator.",
+    "sayToThem": "I am getting the Referee Coordinator or responsible league official to help.",
+    "sourceIds": [
+      "pdsa-law-5-referee",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: Can a coach demand that a young referee be replaced?"
+    ]
+  },
+  {
+    "number": 175,
+    "question": "What if I genuinely don't know the correct rule?",
+    "explanation": "Safety and correct procedure come first. Stop or suspend when a threat requires it and seek a responsible PDSA official’s help; a young referee should not confront a threatening adult alone. Coaches cannot independently dismiss an appointed official. For an unfamiliar rule, consult the adopted source or referee mentor instead of inventing a ruling, and record unresolved concerns for the coordinator.",
+    "sayToThem": "I am getting the Referee Coordinator or responsible league official to help.",
+    "sourceIds": [
+      "pdsa-law-5-referee",
+      "IFAB-2025-26-LAW-5"
+    ],
+    "policy": "none",
+    "restart": "Depends on the actual incident; no automatic restart from the question alone.",
+    "location": "Use the applicable restart location after establishing the incident.",
+    "discipline": "No automatic card; judge the actual conduct and division.",
+    "recommendCoordinator": true,
+    "aliases": [
+      "Please explain: What if I genuinely don't know the correct rule?"
+    ]
+  }
+]

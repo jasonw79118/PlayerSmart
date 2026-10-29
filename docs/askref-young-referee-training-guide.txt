@@ -1,0 +1,197 @@
+PDSA Young Referee Training Guide
+Real game-day questions from players, coaches, and spectators • Based on Palo Duro Soccer Association rules and IFAB Laws of the Game
+
+Jason, I would build this as a training resource for PDSA's younger referees, especially those officiating U6, U8, U10, and U12 games.
+
+The goal is to help them learn three things:
+1. Know the correct rule.
+2. Explain the decision in a short, confident sentence.
+3. Handle disagreement without getting into an argument.
+I reviewed the PDSA Official Rules, PDSA's parent and coaching guidance, and the IFAB 2026/27 Laws of the Game.
+
+One important distinction: PDSA publishes its age-specific playing rules in a linked PDF, but I couldn't retrieve the contents of that PDF. Therefore, the general soccer answers below follow IFAB, while PDSA-specific requirements are identified separately. Age-specific exceptions must be checked against the PDSA document before this becomes an official training handout.
+Part 1: Questions players commonly ask
+These are the questions young referees are most likely to hear while play is happening.
+Question	Correct answer and suggested referee response
+1. "Ref, why was that a foul?"	A player tripped, pushed, held, kicked, or unfairly challenged an opponent. Say: "You tripped the player. Free kick for blue."
+2. "But I got the ball first!"	Getting the ball first doesn't automatically make a challenge legal. A careless, reckless, or excessively forceful challenge can still be a foul. Say: "You got the ball, but your follow-through was a foul."
+3. "That was an accident!"	A player doesn't have to intend to trip someone for a careless challenge to be a foul. Say: "I understand. It was still a careless trip."
+4. "The ball hit my hand. Why is that a foul?"	Not every hand/arm contact is handball. It depends on deliberate contact or whether the arm makes the body unnaturally bigger, among other considerations. Say: "Your arm was extended and made your body bigger."
+5. "Why didn't you call handball?"	Accidental contact alone doesn't necessarily mean a handball offence. Say: "The ball hit the arm, but I didn't see a handball offence."
+6. "They pushed me!"	A push is a foul when it meets the standard for a careless, reckless, or excessively forceful offence. Ordinary contact alone is not necessarily a foul. Say: "I saw the contact. Keep playing."
+7. "Why didn't you blow your whistle?"	The referee may allow play to continue when the team that was fouled benefits. Say: "Advantage! Keep playing!"
+8. "Can I kick the ball while I'm on the ground?"	Playing while on the ground isn't automatically illegal. It becomes an offence if the player acts dangerously or commits another foul. Say: "You can play from the ground as long as it's safe."
+9. "Can I use my shoulder?"	Fair shoulder-to-shoulder contact can be legal when challenging for the ball. A charge can still be careless or otherwise illegal. Say: "Fair shoulder contact is allowed. Pushing isn't."
+10. "Why did you stop the game? I'm not hurt!"	The referee can stop play for a serious injury or safety concern. Say: "I stopped play to make sure you're safe."
+
+Rules: IFAB Law 5 (Referee) and Law 12 (Fouls and Misconduct). 
+IFAB+1
+
+Part 2: Out-of-bounds, throw-ins, and restarts
+Question	Correct answer and suggested response
+11. "The ball touched the line. Isn't it out?"	No. The entire ball must cross the entire boundary line. Say: "The ball was still on the line. Play on."
+12. "Why is that their throw-in?"	The opponents of the last player to touch the ball receive the throw-in. Say: "Blue touched it last. Red's throw."
+13. "What's wrong with my throw-in?"	Under IFAB, the ball must be thrown with both hands from behind and over the head, with part of each foot on or behind the touchline. Say: "Your foot was completely inside the field."
+14. "Can my foot be on the line?"	Yes. Part of each foot may be on the touchline or on the ground outside it. Say: "On the line is okay."
+15. "Can I score directly from a throw-in?"	No. A throw directly into the opponent's goal results in a goal kick. Say: "No goal—goal kick."
+16. "Why is it a corner instead of a goal kick?"	A defender was the last to touch the ball before it crossed their own goal line, without a goal being scored. Say: "Defender touched it last. Corner kick."
+17. "Do goal kicks have to leave the penalty area?"	No. Under IFAB, the ball is in play once kicked and clearly moving. Say: "The ball is in play."
+18. "Do I have to wait for the whistle?"	Not for every restart. Some free kicks require the referee's whistle; a penalty kick does. Say: "Wait for my whistle," when appropriate.
+19. "Can I score straight from a corner kick?"	Yes, directly against the opponents. Say: "Yes, a corner can go straight in."
+20. "Why did you call that a double touch?"	A player generally cannot touch the ball a second time after taking a restart until another player has touched it, subject to specific exceptions. Say: "You touched it twice before anyone else."
+
+Rules: IFAB Laws 9, 13, 15, 16, and 17. 
+IFAB+4
+
+Part 3: Offside questions
+These are particularly important for referees assigned to divisions where PDSA applies offside.
+Question	Correct answer and suggested response
+21. "How was I offside?"	A player can be penalized when involved in active play after being in an offside position when a teammate played or touched the ball. Say: "You were beyond the second-last defender when your teammate played it, and then you became involved."
+22. "But I wasn't offside when I received it!"	The position is generally judged when the teammate plays or touches the ball, not when the receiver controls it. Say: "It's judged when the pass was made."
+23. "I was standing offside but never touched the ball!"	Merely standing offside isn't an offence. However, interfering with an opponent can be an offence without touching the ball. Say: "Position alone isn't an offence."
+24. "Can I be offside on a throw-in?"	No, not when receiving the ball directly from a throw-in. Say: "No offside directly from a throw."
+25. "Can I be offside on a goal kick?"	No, not when receiving the ball directly from a goal kick. Say: "No offside directly from a goal kick."
+26. "Can I be offside from a corner?"	No, not when receiving the ball directly from a corner kick. Say: "No offside directly from a corner."
+27. "Can I be offside in my own half?"	A player cannot be in an offside position while in their own half. Say: "You can't be in an offside position in your own half."
+28. "The defender touched the ball. Doesn't that cancel offside?"	Not always. A deliberate play by a defender may reset offside, but a deflection or save generally does not. Say: "That was a deflection, not a deliberate play."
+
+Rule: IFAB Law 11 (Offside). 
+IFAB
+
+
+
+
+
+Part 4: Questions coaches commonly ask
+Young referees need to know the rules and how to respond respectfully without being drawn into lengthy debates.
+Question from a coach	Correct answer and suggested response
+29. "Ref, can I make a substitution?"	Follow the substitution procedure for that PDSA division. Say: "Coach, wait for the next permitted substitution opportunity."
+30. "Why won't you let my player back in?"	The player must follow the proper re-entry procedure. Say: "I'll signal when your player can enter."
+31. "Can we change goalkeepers?"	Yes, but the referee must be informed and the change must happen during a stoppage. Say: "Yes, coach. Let me know at the stoppage."
+32. "Why wasn't that a penalty?"	A penalty requires a direct-free-kick offence by a defender inside their own penalty area, subject to the applicable division rules. Say: "I didn't see a foul inside the penalty area."
+33. "Why was that an indirect free kick?"	Certain offences, such as dangerous play without contact or offside, result in indirect free kicks. Say: "That offence requires an indirect free kick."
+34. "How much time is left?"	Give a brief, accurate estimate if appropriate. Say: "About three minutes, coach."
+35. "Can you add time for the injury?"	IFAB allows additional time for delays, but PDSA's match procedures may differ. Say: "I'll follow the league's timekeeping rules."
+36. "Can you explain that call?"	A short explanation at a suitable stoppage is reasonable. Say: "Yes, coach. I called a trip. Let's continue."
+37. "The other team has too many players!"	Stop play when appropriate, check the player count, and apply the relevant procedure. Say: "Thank you. I'll check the numbers."
+38. "Can we play with fewer players?"	The answer depends on the division's minimum-player requirements and competition rules. Say: "We'll follow PDSA's requirements for this age group."
+39. "Why did you give my player a yellow card?"	Explain the specific misconduct, such as reckless play, dissent, or delaying a restart. Say: "The caution was for a reckless challenge."
+40. "Can you change your decision?"	A referee can correct certain decisions before play restarts, within the limits of Law 5. Say: "I'll consult my assistant before the restart."
+41. "Can I challenge that call?"	Coaches cannot require an on-field review simply by disagreeing. Say: "Coach, I've made my decision. Let's continue."
+
+Rules: IFAB Laws 3, 5, 7, and 12. PDSA division-specific substitutions and match procedures must be verified separately. 
+IFAB+2
+
+Part 5: Questions from parents and spectators
+PDSA's published Parents Guide emphasizes that many match officials are teenagers and asks spectators not to criticize officials directly. Coaches are also expected to discourage arguing with referees. 
+Palo Duro Soccer Association+1
+
+What someone might say	Recommended referee response
+42. "Are you blind? That was a foul!"	Avoid an argument. Continue officiating. If necessary: "Please keep comments respectful."
+43. "You need to call it both ways!"	"I'm applying the same rules to both teams."
+44. "You missed an obvious handball!"	"I had a clear view and did not see a handball offence." Only say you had a clear view if you actually did.
+45. "You're letting them play too rough!"	"Player safety is my priority. I'll address unsafe challenges."
+46. "How old are you? You shouldn't be refereeing!"	Do not engage personally. If harassment continues, stop at an appropriate time and seek assistance from the referee coordinator or PDSA official.
+47. "Why won't you explain the call to me?"	"Please direct questions through your team's coach."
+48. "That player is hurt! Stop the game!"	Assess the situation. Stop immediately for a serious injury or other immediate danger. "I'm stopping for player safety."
+49. "The other team's parents are yelling at our kids!"	Do not personally confront the crowd. Involve the coaches and responsible league personnel.
+50. "I'm reporting you!"	"You may contact the league. Let's keep the game respectful." Do not retaliate or argue.
+
+An important lesson for young referees
+A referee does not need to answer every comment from the sidelines.
+Three habits worth practicing
+
+1. Explain a decision briefly when appropriate.
+2. Never get into a shouting match with an adult.
+3. Ask the referee mentor, field marshal, commissioner, or other responsible PDSA official for help when conduct becomes abusive.
+
+Part 6: Goalkeepers and penalty kicks
+Question	Correct answer and suggested response
+51. "Can the goalkeeper pick up a pass from a teammate?"	Not when a teammate deliberately kicks the ball to the goalkeeper and the goalkeeper handles it. Say: "Deliberate kick to your goalkeeper. Indirect free kick."
+52. "Can a goalkeeper pick up a ball thrown in by a teammate?"	Not directly from that teammate's throw-in. Say: "You can't handle a teammate's throw-in directly."
+53. "Can a goalkeeper use their hands outside the box?"	A goalkeeper is subject to the same handball restrictions as any other player outside their own penalty area. Say: "Outside the penalty area, you cannot handle the ball."
+54. "Why did you call a corner when the goalkeeper held the ball?"	Under IFAB's current rule, a goalkeeper who controls the ball with the hands or arms for more than eight seconds is penalized with a corner kick. Say: "The goalkeeper held it beyond the permitted time." Verify PDSA's adoption of this rule.
+55. "Can players stand in front of the goalkeeper?"	Players may challenge fairly but cannot illegally impede or interfere with the goalkeeper. Say: "Give the goalkeeper room to release the ball."
+56. "Does the goalkeeper have to stay on the goal line during a penalty?"	At the moment of the kick, the goalkeeper must have at least part of one foot touching, in line with, or behind the goal line. Say: "Keep one foot on or in line with the goal line until the kick."
+57. "Can the penalty taker stop during the run-up?"	Feinting during the run-up is permitted, but illegal feinting once the run-up is completed is penalized. Say: "You can vary your approach, but you can't illegally fake the final kick."
+
+Rules: IFAB Laws 12 and 14; current goalkeeper holding-time provisions. 
+IFAB+1
+
+Part 7: PDSA-specific weather and safety questions
+These answers come directly from PDSA's published local rules and are especially important at the Brown Road Soccer Complex.
+Question	PDSA rule and referee response
+58. "Why did we stop for lightning? It's not raining!"	PDSA requires suspension when lightning occurs within 10 miles. Say: "Lightning is within the safety radius. Everyone must seek shelter."
+59. "The lightning warning stopped. Can we start immediately?"	No. PDSA requires a 30-minute shelter period, restarted after each subsequent lightning strike. Say: "We must complete the 30-minute waiting period."
+60. "Can we keep playing if the wind is strong?"	PDSA's weather guidelines identify sustained winds of 35 mph or gusts greater than 50 mph as suspension conditions. Say: "We need to follow the league's wind-safety policy."
+61. "Why are we stopping for water breaks?"	PDSA uses heat-safety guidance based on wet-bulb globe temperature (WBGT), with possible additional hydration breaks. Say: "We're taking a safety break because of the heat conditions."
+62. "Why can't we play on this wet field?"	PDSA identifies standing water, snow, and fields the board considers unsuitable as reasons for suspension. Say: "The field conditions aren't safe for play."
+63. "We were winning when the game stopped. Does the score count?"	PDSA generally treats weather-suspended matches differently depending on whether at least 50% of the match was completed. Exceptions can be agreed to by both coaches and the division commissioner. Say: "The league will determine the result under its suspension policy."
+64. "Who decides whether a suspended match gets rescheduled?"	PDSA's published policy governs this, with potential agreement between both coaches and the division commissioner. Say: "The coaches and commissioner will handle rescheduling."
+
+Source: PDSA Official Rules — Weather and field conditions. 
+Palo Duro Soccer Association
+
+
+
+
+
+Part 8: PDSA age-division rules young referees must learn
+Before refereeing, every official should be able to answer the following questions for their assigned division.
+
+PDSA currently lists U6, U8, U10, U12, U14, and U18 divisions, plus U10 Competitive. 
+palodurosoccer.com
+
+Question	What the referee must verify in PDSA's rules
+65. "How many players are allowed on the field?"	The number for that specific age division
+66. "Are we playing with a goalkeeper?"	Whether goalkeepers are used in that division
+67. "Is there offside in our age group?"	Whether and where offside applies
+68. "When can we substitute players?"	Substitution opportunities and re-entry rules
+69. "How long are the halves or quarters?"	Match duration and halftime arrangements
+70. "Can players deliberately head the ball?"	Age-related heading restrictions and the restart
+71. "Do we use build-out lines?"	Whether a build-out line applies and how it functions
+72. "Can the goalkeeper punt the ball?"	Whether goalkeeper distribution is restricted
+73. "What happens after an incorrect throw-in?"	Whether that division allows instructional retakes
+74. "Can a player be sent off?"	PDSA's disciplinary procedures for that division
+75. "What happens when one team is winning by a lot?"	Whether PDSA has a mercy rule or special competitive-balance provisions
+
+These should become a dedicated PDSA rules section once the local PDF is available.
+Part 9: Practice saying the right thing
+Knowing the rules is only half of refereeing. Young officials also need to practice speaking confidently under pressure.
+
+Here are five short scenarios they can role-play during training.
+Referee role-play
+1 of 5
+
+A coach yells, “Ref! He got the ball first! How is that a foul?”
+What should the referee say or do?
+Show the suggested answer PreviousNext scenario 
+
+Five things I would teach every young PDSA referee
+Safety comes first.
+
+Stop for serious injuries, dangerous conditions, and PDSA weather alerts.
+
+
+
+Keep explanations short.
+
+"Trip. Blue free kick." A young referee doesn't need to deliver a speech.
+
+
+
+Call what you actually see.
+
+Don't guess simply because a coach or spectator is demanding a whistle.
+
+
+
+Respect goes both ways.
+
+Referees should speak respectfully, and coaches and spectators are expected to do the same.
+
+
+
+Ask for help when needed.
+
+Use a referee mentor or league official for unfamiliar rules, confrontations, or safety problems.

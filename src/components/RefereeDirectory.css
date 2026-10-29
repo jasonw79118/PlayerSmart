@@ -1,0 +1,17 @@
+.referee-directory { display: grid; gap: 20px; }
+.referee-directory p,.referee-directory small { line-height: 1.6; }
+.referee-directory-layout { display: grid; grid-template-columns: minmax(210px,280px) minmax(0,1fr); gap: 24px; }
+.referee-directory-list,.referee-editor { display: grid; gap: 16px; align-content: start; min-width: 0; }
+.referee-list-button { display: grid; gap: 8px; width: 100%; padding: 15px; text-align: left; overflow-wrap: anywhere; background: var(--bg); color: var(--white); border: 1px solid var(--border); border-radius: 10px; cursor: pointer; }
+.referee-list-button[aria-pressed="true"] { border-color: var(--purple); }
+.referee-list-button span,.referee-list-button small { font-size: 12px; color: var(--muted); }
+.referee-fields { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 14px; }
+.referee-fields label { display: grid; gap: 7px; font-size: 13px; }
+.referee-fields input,.referee-fields select,.referee-fields textarea { width: 100%; min-height: 42px; padding: 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--white); }
+.referee-options { display: flex; gap: 12px; flex-wrap: wrap; }
+.referee-options label,.referee-check { display: flex; align-items: center; gap: 7px; font-size: 13px; }
+.referee-window,.referee-editor fieldset { padding: 14px; border: 1px solid var(--border); border-radius: 10px; }
+.referee-window { display: grid; gap: 16px; }
+.referee-editor > label:not(.referee-check) { display: grid; gap: 8px; }
+.referee-editor > label:not(.referee-check) > input { padding: 10px; min-height: 42px; color: var(--white); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+@media(max-width:800px) { .referee-directory-layout { grid-template-columns: 1fr; } .referee-directory-list { grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); } }

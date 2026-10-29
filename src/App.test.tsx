@@ -1,6 +1,8 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
+import * as neonAuthHelpers from './lib/neon-auth'
+import { drawTestSignature } from './test-signature'
 
 function openScheduledGroupEvaluation() {
   const openButton = screen.queryByRole('button', { name: 'Open scheduled group evaluation' })
@@ -8,10 +10,123 @@ function openScheduledGroupEvaluation() {
 }
 
 describe('PlayerSmart phase-one preview', () => {
+  it('keeps administrator preview and role controls out of the actual coach screen', () => {
+    render(<App initialAccess="Coach" />)
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    expect(screen.getByRole('region', { name: 'Coach draft workspace' })).toBeTruthy()
+    expect(screen.queryByRole('button', { name: 'Back to administrator' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Administrator view' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Coach view' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Admin' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Compare participant views' })).toBeNull()
+    expect(screen.queryByRole('combobox', { name: 'Draft role' })).toBeNull()
+    expect(screen.queryByRole('combobox', { name: 'Coach team for draft pick' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Start draft' })).toBeNull()
+  })
+
+  it('returns to the administrator and updates independent coach plans and rosters after picks', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Reset draft test data' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Coach view' }))
+    fireEvent.change(screen.getByRole('combobox', { name: 'Coach team for draft pick' }), { target: { value: 'Cameron Scott' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Prioritize Alex Chen for Cameron Scott' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Prioritize Jamie Parker for Cameron Scott' }))
+    expect(screen.getByRole('combobox', { name: 'Select player to draft' })).toHaveValue('draft-test-2-0')
+    expect(screen.getByRole('button', { name: 'Make coach pick' })).toBeDisabled()
+    fireEvent.change(screen.getByRole('combobox', { name: 'Coach team for draft pick' }), { target: { value: 'Reese Cooper' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Select Jordan James for Reese Cooper' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Back to administrator' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Start draft' }))
+    const sourceRow = [...document.querySelectorAll('.live-draft-board tbody tr')].find((row) => row.textContent?.includes('Alex Chen'))!
+    const alexScore = Number.parseFloat(sourceRow.children[1].textContent!)
+    const alexGrade = sourceRow.children[2].textContent!
+    fireEvent.change(screen.getByRole('combobox', { name: 'Select player to assign' }), { target: { value: 'draft-test-2-0' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Assign player to Coach 1' }))
+    const balance = screen.getByRole('region', { name: 'U10 team balance' })
+    const coachRow = within(balance).getByRole('rowheader', { name: 'Coach 1' }).closest('tr')!
+    expect(coachRow.children[4]).toHaveTextContent(alexScore.toFixed(2))
+    fireEvent.click(screen.getByRole('button', { name: "View latest pick's team" }))
+    expect(screen.getByRole('region', { name: 'Coach 1 live draft roster' })).toHaveTextContent('Alex Chen')
+    expect(screen.getByRole('region', { name: 'Coach 1 live draft roster' })).toHaveTextContent(`U10 · Eval #08 · Grade ${alexGrade} · ${alexScore.toFixed(2)}/10`)
+    expect(screen.getByRole('region', { name: 'Team evaluation for Coach 1' })).toHaveTextContent(alexScore.toFixed(2))
+    expect(screen.getByRole('region', { name: 'Suggested draft board for Coach 1' })).toHaveTextContent('0 preferred choices available')
+    fireEvent.change(screen.getByRole('combobox', { name: 'Coach team for draft pick' }), { target: { value: 'Reese Cooper' } })
+    expect(screen.getByRole('combobox', { name: 'Select player to draft' })).toHaveValue('draft-test-2-2')
+    fireEvent.change(screen.getByRole('combobox', { name: 'Coach team for draft pick' }), { target: { value: 'Cameron Scott' } })
+    const board = screen.getByRole('region', { name: 'Suggested draft board for Cameron Scott' })
+    expect(within(board).queryByRole('button', { name: 'Select Alex Chen for Cameron Scott' })).toBeNull()
+    const rows = within(board).getAllByRole('listitem')
+    expect(rows[0]).toHaveTextContent('Jamie Parker')
+    expect(rows[0]).toHaveTextContent('Preference 1')
+    expect(screen.getByRole('combobox', { name: 'Select player to draft' })).toHaveValue('draft-test-2-1')
+    expect(screen.getByRole('region', { name: 'Cameron Scott live draft roster' })).not.toHaveTextContent('Alex Chen')
+    fireEvent.click(screen.getByRole('button', { name: 'Back to administrator' }))
+    fireEvent.change(screen.getByRole('combobox', { name: 'Select player to assign' }), { target: { value: 'draft-test-2-1' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Assign player to Cameron Scott' }))
+    fireEvent.click(screen.getByRole('button', { name: "View latest pick's team" }))
+    expect(screen.getByRole('region', { name: 'Cameron Scott live draft roster' })).toHaveTextContent('Jamie Parker')
+    fireEvent.click(screen.getByRole('button', { name: "Open this coach's My Team" }))
+    expect(screen.getByRole('list', { name: 'Cameron Scott players' })).toHaveTextContent('Jamie Parker')
+    expect(screen.getByRole('list', { name: 'Cameron Scott players' })).not.toHaveTextContent('Alex Chen')
+    expect(screen.getByRole('list', { name: 'Cameron Scott players' })).toHaveTextContent('U10 · Grade C')
+    expect(screen.getByRole('region', { name: 'Team evaluation for Cameron Scott' })).toHaveTextContent('1 / 1')
+    fireEvent.click(screen.getByRole('button', { name: 'Back to administrator' }))
+    expect(screen.getByRole('button', { name: 'End draft' })).toBeEnabled()
+  }, 60_000)
+
+  it('loads six divisions and runs thirty administrator picks into five six-player teams', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Reset draft test data' }))
+    fireEvent.click(screen.getByRole('button', { name: 'My Team' }))
+    expect(screen.queryByRole('list', { name: / players$/ })).toBeNull()
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    const divisionSelector = screen.getByRole('combobox', { name: 'Draft division' })
+    for (const division of ['U8 Boys', 'U8 Girls', 'U10', 'U12', 'U14', 'U18']) {
+      fireEvent.change(divisionSelector, { target: { value: division } })
+      expect(document.querySelectorAll('.admin-draft-order > div')).toHaveLength(5)
+      expect(document.querySelectorAll('.live-draft-board tbody tr')).toHaveLength(30)
+      expect(document.querySelectorAll('.draft-assignment-committed')).toHaveLength(0)
+      const selection = screen.getByRole('combobox', { name: 'Select player to assign' })
+      expect(within(selection).getAllByRole('option')).toHaveLength(31)
+    }
+    fireEvent.click(screen.getByRole('button', { name: 'Start draft' }))
+    expect(screen.getByRole('button', { name: 'Reset draft test data' })).toBeDisabled()
+    const selection = screen.getByRole('combobox', { name: 'Select player to assign' })
+    for (let pick = 0; pick < 30; pick += 1) {
+      const option = within(selection).getAllByRole('option')[1] as HTMLOptionElement
+      fireEvent.change(selection, { target: { value: option.value } })
+      fireEvent.click(screen.getByRole('button', { name: /^Assign player to / }))
+    }
+    const assignments = [...document.querySelectorAll('.live-draft-board tbody tr')].map((row) => row.lastElementChild?.textContent)
+    expect(new Set(assignments).size).toBe(5)
+    for (const coach of new Set(assignments)) expect(assignments.filter((name) => name === coach)).toHaveLength(6)
+    expect(document.querySelectorAll('.draft-assignment-committed')).toHaveLength(30)
+    expect(within(selection).getAllByRole('option')).toHaveLength(1)
+    fireEvent.click(screen.getByRole('button', { name: 'End draft' }))
+    fireEvent.change(divisionSelector, { target: { value: 'U8 Boys' } })
+    expect(document.querySelectorAll('.draft-assignment-committed')).toHaveLength(0)
+    expect(within(screen.getByRole('combobox', { name: 'Select player to assign' })).getAllByRole('option')).toHaveLength(31)
+    fireEvent.click(screen.getByRole('button', { name: 'My Team' }))
+    // The last drafted division remains selected, and only drafted players enter a roster.
+    expect(within(screen.getByRole('list', { name: / players$/ })).getAllByRole('listitem')).toHaveLength(6)
+  }, 60_000)
+
+  it('opens the three-participant draft walkthrough and returns to the existing workspace', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Compare participant views' }))
+    expect(screen.getByRole('region', { name: 'Draft administrator view' })).toBeTruthy()
+    expect(screen.getByRole('region', { name: 'Coach Avery Hill view' })).toBeTruthy()
+    expect(screen.getByRole('region', { name: 'Coach Morgan Reed view' })).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Return to draft workspace' }))
+    expect(screen.getByRole('heading', { name: 'Draft board' })).toBeTruthy()
+  })
   it('shows only fictional sample data and navigates between app areas', () => {
     render(<App />)
-    expect(screen.getByText(/all names and ratings are fictional/i)).toBeTruthy()
-    expect(screen.getAllByText('Jordan Lee').length).toBeGreaterThan(0)
+    expect(screen.getByText(/Good morning, Coach/i)).toBeTruthy()
+    expect(screen.getAllByText('Taylor Brooks').length).toBeGreaterThan(0)
     fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
     expect(screen.getByRole('heading', { name: 'Evaluations' })).toBeTruthy()
     expect(screen.getByRole('heading', { name: 'Division group evaluation' })).toBeTruthy()
@@ -93,8 +208,9 @@ describe('PlayerSmart phase-one preview', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
     openScheduledGroupEvaluation()
+    fireEvent.change(screen.getByRole('combobox', { name: 'Evaluation number of teams' }), { target: { value: '2' } })
     fireEvent.click(screen.getByRole('checkbox', { name: 'Select head coach Avery Hill' }))
-    expect(document.querySelector('.coach-team-count')?.textContent).toContain('2 teams')
+    expect(document.querySelector('.coach-team-count')?.textContent).toContain('2 of 2 head coaches selected')
     fireEvent.change(screen.getByRole('combobox', { name: 'Taylor Brooks coach parent' }), { target: { value: 'Avery Hill' } })
     expect(screen.getByRole('combobox', { name: 'Taylor Brooks coach parent' })).toHaveValue('Avery Hill')
     expect(screen.getByRole('button', { name: 'Mark Coach 1 evaluation done' })).toBeDisabled()
@@ -130,15 +246,15 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByText('2. Morgan Reed')).toBeTruthy()
     fireEvent.click(screen.getByRole('button', { name: 'Randomize draft order' }))
     expect(screen.getByRole('status').textContent).toMatch(/draft order randomized/i)
-    fireEvent.change(screen.getByRole('combobox', { name: 'Draft demo access' }), { target: { value: 'Coach' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Coach view' }))
     expect(screen.queryByRole('button', { name: 'Randomize draft order' })).toBeNull()
-    fireEvent.change(screen.getByRole('combobox', { name: 'Draft demo access' }), { target: { value: 'Admin' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Back to administrator' }))
     expect(screen.getByRole('button', { name: 'Start draft' })).toBeTruthy()
   })
 
   it('blocks a coach-admin from starting their own division draft', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Users & Access' }))
     fireEvent.change(screen.getByRole('combobox', { name: 'Access level for Coach 1' }), { target: { value: 'Admin' } })
     fireEvent.click(screen.getByRole('button', { name: /^Draft/ }))
@@ -147,24 +263,45 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByRole('button', { name: 'Start draft' })).toBeDisabled()
   })
 
-  it('shows completed player grades immediately and sorts the live board by grade then evaluation number', () => {
+  it('shows player grades while keeping the live board and selection list in last-name order', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /^Draft/ }))
     const table = document.querySelector('.live-draft-board .live-draft-table')!
     const rows = Array.from(table.querySelectorAll('tbody tr'))
     const harper = rows.find((row) => row.textContent?.includes('Harper Lane'))
     expect(harper?.querySelector('td:nth-child(3)')?.textContent).toBe('A')
-    const rank: Record<string, number> = { 'A+': 4, A: 3, B: 2, C: 1, Incomplete: 0 }
-    const values = rows.map((row) => ({
-      grade: row.querySelector('td:nth-child(3)')?.textContent?.trim() ?? 'Incomplete',
-      number: Number(row.querySelector('th[scope="row"] small')?.textContent?.replace(/\D/g, '') ?? 0),
-    }))
-    for (let index = 1; index < values.length; index += 1) {
-      expect(rank[values[index - 1].grade]).toBeGreaterThanOrEqual(rank[values[index].grade])
-      if (values[index - 1].grade === values[index].grade) expect(values[index - 1].number).toBeGreaterThanOrEqual(values[index].number)
-    }
+    expect(rows.map((row) => row.querySelector('th[scope="row"]')?.firstChild?.textContent)).toEqual([
+      'Taylor Brooks', 'Emerson Cruz', 'Skyler James', 'Harper Lane', 'Jordan Lee', 'Riley Morgan', 'Casey Rivera',
+    ])
+    const options = within(screen.getByRole('combobox', { name: 'Select player to assign' })).getAllByRole('option').slice(1)
+    expect(options.map((option) => option.textContent?.split(' / ')[0])).toEqual([
+      'Emerson Cruz', 'Skyler James', 'Harper Lane', 'Jordan Lee', 'Riley Morgan',
+    ])
     expect(screen.queryByRole('combobox', { name: 'Select player to draft' })).toBeNull()
     expect(screen.queryByRole('combobox', { name: 'Coach team for draft pick' })).toBeNull()
+  })
+
+  it('lets the administrator assign an available player to the coach on the clock', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^Draft/ }))
+    const assign = screen.getByRole('button', { name: 'Assign player to Coach 1' })
+    const selection = screen.getByRole('combobox', { name: 'Select player to assign' })
+    expect(assign).toBeDisabled()
+    expect(selection).toBeDisabled()
+    fireEvent.click(screen.getByRole('button', { name: 'Start draft' }))
+    expect(assign).toBeDisabled()
+    fireEvent.change(selection, { target: { value: 'p-002' } })
+    expect(assign).toBeEnabled()
+    fireEvent.click(assign)
+    const row = Array.from(document.querySelectorAll('.live-draft-board tbody tr')).find((entry) => entry.textContent?.includes('Riley Morgan'))
+    expect(row).toHaveClass('draft-assignment-committed')
+    expect(row?.textContent).toContain('Coach 1')
+    expect(within(selection).queryByRole('option', { name: /Riley Morgan/ })).toBeNull()
+    expect(assign).toBeDisabled()
+    fireEvent.click(screen.getByRole('button', { name: 'End draft' }))
+    expect(selection).toBeDisabled()
+    fireEvent.click(screen.getByRole('button', { name: 'My Team' }))
+    expect(screen.getByRole('list', { name: 'Coach 1 players' }).textContent).toContain('Riley Morgan')
   })
 
   it('shows all division evaluation players and updates My Team immediately when assigned', () => {
@@ -174,7 +311,7 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getAllByText('Riley Morgan').length).toBeGreaterThan(0)
     expect(screen.queryByRole('combobox', { name: 'Select player to draft' })).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: 'Start draft' }))
-    fireEvent.change(screen.getByRole('combobox', { name: 'Draft demo access' }), { target: { value: 'Coach' } })
+    fireEvent.change(screen.getByRole('combobox', { name: 'Draft role' }), { target: { value: 'Coach' } })
     const playerSelection = screen.getByRole('combobox', { name: 'Select player to draft' })
     fireEvent.change(playerSelection, { target: { value: 'p-002' } })
     fireEvent.click(screen.getByRole('button', { name: 'Make coach pick' }))
@@ -184,24 +321,44 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByRole('list', { name: 'Coach 1 players' }).textContent).toContain('Riley Morgan')
   })
 
-  it('shows selectable head coaches and derives the team count from selected coaches', () => {
+  it('sets division team counts before selecting head coaches and hides Scoring as for Admin', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
     expect(screen.getByRole('heading', { name: 'Division group evaluation' })).toBeTruthy()
     expect(screen.queryByLabelText('Evaluation teams participating')).toBeNull()
     expect(screen.queryByLabelText('Evaluation coaches participating')).toBeNull()
-    expect(document.querySelector('.coach-team-count')?.textContent).toContain('1 team')
+    expect(document.querySelector('.coach-team-count')?.textContent).toContain('1 of 1 head coaches selected')
     expect(screen.getByRole('checkbox', { name: 'Select head coach Coach 1' })).toBeChecked()
+    expect(screen.queryByRole('combobox', { name: 'Current evaluating coach' })).toBeNull()
+    const count = screen.getByRole('combobox', { name: 'Evaluation number of teams' })
+    expect(count).toHaveValue('1')
     const addCoach = screen.getByRole('checkbox', { name: 'Select head coach Avery Hill' })
+    expect(addCoach).toBeDisabled()
+    fireEvent.change(count, { target: { value: '2' } })
     fireEvent.click(addCoach)
-    expect(document.querySelector('.coach-team-count')?.textContent).toContain('2 teams')
+    expect(document.querySelector('.coach-team-count')?.textContent).toContain('2 of 2 head coaches selected')
     fireEvent.click(addCoach)
-    expect(document.querySelector('.coach-team-count')?.textContent).toContain('1 team')
+    expect(document.querySelector('.coach-team-count')?.textContent).toContain('1 of 2 head coaches selected')
+    expect(screen.getByText(/Select exactly 2 head coaches/)).toBeTruthy()
+    fireEvent.change(screen.getByRole('combobox', { name: 'Evaluation division' }), { target: { value: 'U12' } })
+    expect(screen.getByRole('combobox', { name: 'Evaluation number of teams' })).toHaveValue('2')
+    fireEvent.change(screen.getByRole('combobox', { name: 'Evaluation number of teams' }), { target: { value: '3' } })
+    fireEvent.change(screen.getByRole('combobox', { name: 'Evaluation division' }), { target: { value: 'U10' } })
+    expect(screen.getByRole('combobox', { name: 'Evaluation number of teams' })).toHaveValue('2')
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    expect(screen.getByRole('button', { name: 'Start draft' })).toBeDisabled()
+    fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
+    fireEvent.click(screen.getByRole('checkbox', { name: 'Select head coach Avery Hill' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Draft' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Start draft' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
+    expect(screen.getByRole('combobox', { name: 'Evaluation number of teams' })).toBeDisabled()
+    expect(screen.getByRole('checkbox', { name: 'Select head coach Avery Hill' })).toBeDisabled()
   })
 
   it('keeps the account control in the header and removes the sidebar promo card', () => {
     render(<App />)
-    expect(screen.getByRole('button', { name: 'Sign out Coach Demo' })).toBeTruthy()
+    expect(screen.getByRole('button', { name: 'Sign out Coach' })).toBeTruthy()
     expect(screen.queryByText('Player-first, always')).toBeNull()
     expect(document.querySelector('.sidebar .profile-button')).toBeNull()
   })
@@ -264,7 +421,7 @@ describe('PlayerSmart phase-one preview', () => {
 
   it('archives and resets session rosters, then requires a reason before revealing archived players', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Archives' }))
     fireEvent.click(screen.getByRole('button', { name: 'Archive and reset current season now' }))
     expect(screen.getByText(/Archive records remain hidden until a reason is recorded/i)).toBeTruthy()
@@ -277,7 +434,7 @@ describe('PlayerSmart phase-one preview', () => {
 
   it('searches AskRef only after a knowledge entry is marked verified and shows its citation', async () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Season' }))
     fireEvent.change(screen.getByRole('textbox', { name: 'Rule entry title' }), { target: { value: 'Offside position overview' } })
     fireEvent.change(screen.getByRole('textbox', { name: 'Rule source publisher' }), { target: { value: 'Fictional rules publisher' } })
@@ -289,11 +446,11 @@ describe('PlayerSmart phase-one preview', () => {
     fireEvent.change(screen.getByRole('textbox', { name: 'Rule entry text' }), { target: { value: 'An offside position is considered in the context of the applicable law.' } })
     fireEvent.click(screen.getByRole('button', { name: 'Save rule draft' }))
     fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
-    fireEvent.change(screen.getByRole('textbox', { name: 'Ask a soccer rules question' }), { target: { value: 'What is offside in U8?' } })
+    fireEvent.change(screen.getByRole('textbox', { name: 'Ask a soccer rules question' }), { target: { value: 'What is an offside position?' } })
     fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
     await screen.findByRole('alert')
     expect(screen.queryByText('Offside position overview')).toBeNull()
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Season' }))
     fireEvent.click(screen.getByRole('button', { name: 'Mark verified' }))
     fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
@@ -301,40 +458,43 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByText(/Law 11, section 1/)).toBeTruthy()
   })
 
-  it('finds the U8 quarter-duration excerpt and links IFAB when AI auth is unavailable', async () => {
+  it('answers a U8 timing question specifically even when AI auth is unavailable', async () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
     fireEvent.change(screen.getByRole('textbox', { name: 'Ask a soccer rules question' }), { target: { value: 'How long is a quarter in U8?' } })
     fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
-    await screen.findByRole('alert')
-    expect(screen.getByRole('heading', { name: 'Match duration and breaks by division' })).toBeTruthy()
-    expect(screen.getByText(/U8 games have four 10-minute quarters/i)).toBeTruthy()
-    expect(screen.getByText(/Law 7 – Duration of the Match, page 10/)).toBeTruthy()
+    await screen.findByText(/^U8 games have four 10-minute quarters:/)
+    expect(screen.queryByRole('alert')).toBeNull()
+    expect(screen.getByRole('log')).not.toHaveTextContent('U10')
     expect(screen.getAllByRole('link', { name: 'Open IFAB Laws of the Game' }).some((link) => link.getAttribute('href') === 'https://www.theifab.com/laws/latest/')).toBe(true)
   })
 
-  it('finds rules despite common misspellings and indexes multiple PDSA laws', async () => {
+  it('understands a misspelled timing question and keeps unrelated backup excerpts collapsed', async () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
     const question = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
     fireEvent.change(question, { target: { value: 'How many minits in each quater for u8?' } })
     fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
-    await screen.findByRole('alert')
-    expect(screen.getByText(/U8 games have four 10-minute quarters/i)).toBeTruthy()
-    fireEvent.change(question, { target: { value: 'is offside called in u8' } })
+    await screen.findByText(/^U8 games have four 10-minute quarters:/)
+    fireEvent.change(question, { target: { value: 'offside position?' } })
     fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
     await screen.findByRole('alert')
+    const backup = screen.getByText('Browse related rulebook excerpts (not an AI answer)').closest('details')!
+    expect(backup).not.toHaveAttribute('open')
+    fireEvent.click(screen.getByText('Browse related rulebook excerpts (not an AI answer)'))
+    expect(backup).toHaveAttribute('open')
     expect(screen.getByRole('heading', { name: 'Offside by division' })).toBeTruthy()
-    expect(screen.getByText(/does not call offside in U6 or U8/i)).toBeTruthy()
   })
 
   it('lets the Admin demo maintain the PDSA coach directory and scheduled division dates', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Coaches' }))
     fireEvent.change(screen.getByRole('textbox', { name: 'Add head coach' }), { target: { value: 'Coach Taylor' } })
-    fireEvent.click(screen.getByRole('button', { name: 'Add coach to division' }))
-    expect(screen.getByRole('textbox', { name: 'U10 head coach 2' })).toHaveValue('Coach Taylor')
+    fireEvent.click(screen.getByRole('button', { name: 'Add head coach to list' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
+    expect(screen.getByRole('checkbox', { name: 'Select head coach Coach Taylor' })).not.toBeChecked()
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Season' }))
     fireEvent.change(screen.getByLabelText('U10 evaluation date'), { target: { value: '2026-11-15' } })
     fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
@@ -343,17 +503,17 @@ describe('PlayerSmart phase-one preview', () => {
 
   it('organizes demo users by access level and supports announcement attachments', async () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Users & Access' }))
-    expect(screen.getByRole('combobox', { name: 'Access level for Board Demo' })).toHaveValue('Admin')
-    expect(screen.getByRole('combobox', { name: 'Access level for Referee Demo' })).toHaveValue('Referee')
+    expect(screen.getByRole('combobox', { name: 'Access level for League Administrator' })).toHaveValue('Admin')
+    expect(screen.getByRole('combobox', { name: 'Access level for Match Official' })).toHaveValue('Referee')
     fireEvent.click(within(screen.getByRole('navigation', { name: 'Admin menus' })).getByRole('button', { name: 'Announcements' }))
     fireEvent.change(screen.getByRole('textbox', { name: 'Announcement title' }), { target: { value: 'Field update' } })
     fireEvent.change(screen.getByRole('textbox', { name: 'Announcement message' }), { target: { value: 'A fictional field update for coaches.' } })
     const attachment = new File(['demo attachment'], 'field-update.pdf', { type: 'application/pdf' })
     fireEvent.change(screen.getByLabelText('Announcement attachment'), { target: { files: [attachment] } })
     expect(await screen.findByText(/Attached locally: field-update.pdf/)).toBeTruthy()
-    fireEvent.click(screen.getByRole('button', { name: 'Publish demo announcement' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Publish announcement' }))
     expect(screen.getByText('field-update.pdf')).toBeTruthy()
   })
 
@@ -383,7 +543,7 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByText('2 reviews')).toBeTruthy()
     expect(screen.getByText(/Scanned before receiving/)).toBeTruthy()
 
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
     fireEvent.change(screen.getByLabelText('Season end date'), { target: { value: yesterday } })
     fireEvent.click(screen.getByRole('button', { name: /^Awards/ }))
@@ -409,11 +569,16 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByText('Assistant Coach Signature')).toBeTruthy()
   }, 30000)
 
-  it('requires sign-in before sending a question to AskRef AI', async () => {
+  it('explains demo limitations without sending an anonymous AI request or demanding an unavailable sign-in', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
     fireEvent.click(screen.getByRole('button', { name: /^Offside/ }))
-    expect(await screen.findByRole('alert')).toHaveTextContent(/sign in to ask AskRef/i)
+    expect(await screen.findByRole('alert')).toHaveTextContent(/AI service is not connected/i)
+    expect(screen.getByRole('alert')).not.toHaveTextContent(/sign in to ask/i)
+    expect(fetchMock).not.toHaveBeenCalled()
+    vi.unstubAllGlobals()
   })
 
   it('toggles between purple light and dark themes and remembers only that preference', () => {
@@ -441,14 +606,20 @@ describe('PlayerSmart phase-one preview', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'Evaluations' }))
     fireEvent.click(screen.getByRole('button', { name: 'Import roster' }))
-    expect(screen.getByText(/do not select registration exports or images containing real youth information/i)).toBeTruthy()
+    expect(screen.getByText(/Review the roster before adding players/i)).toBeTruthy()
     const csv = new File(['Name,Team\nAlex Sample,Blue Comets\nJamie Example,Red Rockets'], 'fictional-roster.csv', { type: 'text/csv' })
-    fireEvent.change(screen.getByLabelText('Choose fictional roster CSV'), { target: { files: [csv] } })
+    fireEvent.change(screen.getByLabelText('Choose roster CSV'), { target: { files: [csv] } })
     expect((await screen.findAllByText(/Alex Sample/)).length).toBeGreaterThan(0)
-    fireEvent.click(screen.getByRole('button', { name: 'Add 2 demo players' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Add 2 players' }))
+    const registrationRows = [...document.querySelectorAll('.batch-evaluation-table tbody tr')]
+    const alex = registrationRows.find((row) => row.children[0].textContent === 'Alex Sample')!
+    const jamie = registrationRows.find((row) => row.children[0].textContent === 'Jamie Example')!
+    expect(alex.children[1]).toHaveTextContent('09')
+    expect(jamie.children[1]).toHaveTextContent('03')
+    expect(registrationRows.indexOf(jamie)).toBeLessThan(registrationRows.indexOf(alex))
     fireEvent.click(screen.getByRole('button', { name: 'My Team' }))
     expect(within(screen.getByRole('list', { name: 'Coach 1 players' })).getByText('Alex Sample')).toBeTruthy()
-    expect(screen.getByText(/2 fictional demo players added in memory/i)).toBeTruthy()
+    expect(screen.getByText(/2 players added in memory/i)).toBeTruthy()
   })
 
   it('checks Neon through the server API without exposing the database connection to the browser', async () => {
@@ -465,7 +636,7 @@ describe('PlayerSmart phase-one preview', () => {
     const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ status: 'ok', database: 'connected' }) })
     vi.stubGlobal('fetch', fetchMock)
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Admin DEMO' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Admin' }))
     fireEvent.click(screen.getByRole('button', { name: 'Wake Neon database' }))
     expect(await screen.findByText('Neon database is awake and responding.')).toBeTruthy()
     expect(fetchMock).toHaveBeenCalledWith('/api/health', { cache: 'no-store' })
@@ -477,7 +648,7 @@ describe('PlayerSmart phase-one preview', () => {
     fireEvent.click(screen.getByRole('button', { name: /^ScoreBoard/ }))
     expect(screen.getByRole('heading', { name: 'ScoreBoard' })).toBeTruthy()
     fireEvent.click(screen.getByRole('button', { name: 'Increase home score' }))
-    fireEvent.click(screen.getByRole('button', { name: 'Preview guest ScoreBoard' }))
+    fireEvent.click(screen.getByRole('button', { name: 'View guest ScoreBoard' }))
     expect(screen.getByText('3', { selector: '.guest-scoreline strong' })).toBeTruthy()
     expect(document.querySelector('.guest-score-view')?.textContent).not.toContain('Coach Avery')
     expect(document.querySelector('.guest-score-view')?.textContent).not.toContain('Players present')
@@ -488,10 +659,14 @@ describe('PlayerSmart phase-one preview', () => {
     fireEvent.click(screen.getByRole('button', { name: /^ScoreBoard/ }))
     const finalizeButton = screen.getByRole('button', { name: 'Finalize game' })
     expect(finalizeButton).toBeDisabled()
-    fireEvent.change(screen.getByRole('textbox', { name: 'Home coach signature name' }), { target: { value: 'Coach Avery' } })
+    expect(screen.getByRole('textbox', { name: 'Home coach signature name' })).toHaveValue('Coach Avery')
+    expect(screen.getAllByRole('button', { name: 'Sign score confirmation' })[0]).toBeDisabled()
+    drawTestSignature(screen.getByRole('img', { name: 'Home coach signature pad' }))
     fireEvent.click(screen.getAllByRole('button', { name: 'Sign score confirmation' })[0])
+    expect(screen.getByRole('img', { name: 'Home coach recorded signature' }).querySelectorAll('polyline')).toHaveLength(1)
     expect(finalizeButton).toBeDisabled()
-    fireEvent.change(screen.getByRole('textbox', { name: 'Away coach signature name' }), { target: { value: 'Coach Jordan' } })
+    expect(screen.getByRole('textbox', { name: 'Away coach signature name' })).toHaveValue('Coach Jordan')
+    drawTestSignature(screen.getByRole('img', { name: 'Away coach signature pad' }))
     fireEvent.click(screen.getAllByRole('button', { name: 'Sign score confirmation' })[0])
     expect(finalizeButton).toBeEnabled()
     fireEvent.click(finalizeButton)
@@ -499,15 +674,44 @@ describe('PlayerSmart phase-one preview', () => {
     expect(screen.getByRole('button', { name: 'Increase home score' })).toBeDisabled()
   })
 
-  it('shows a referee launchpad with only AskRef and GameCard actions', () => {
+  it('automatically fills signature names from the assigned coaches and follows coach changes', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'ScoreBoard' }))
+    const home = screen.getByRole('textbox', { name: 'Home coach signature name' })
+    const away = screen.getByRole('textbox', { name: 'Away coach signature name' })
+    expect(home).toHaveValue('Coach Avery')
+    expect(away).toHaveValue('Coach Jordan')
+    expect(home).toHaveAttribute('readonly')
+    fireEvent.change(screen.getByRole('textbox', { name: 'Home coach' }), { target: { value: 'John Test' } })
+    expect(home).toHaveValue('John Test')
+    drawTestSignature(screen.getByRole('img', { name: 'Home coach signature pad' }))
+    fireEvent.click(screen.getAllByRole('button', { name: 'Sign score confirmation' })[0])
+    expect(screen.getByText('Signed by John Test')).toBeTruthy()
+  })
+
+  it('clears signatures and confirmations when the match score changes', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'ScoreBoard' }))
+    expect(screen.getByRole('textbox', { name: 'Home coach signature name' })).toHaveValue('Coach Avery')
+    drawTestSignature(screen.getByRole('img', { name: 'Home coach signature pad' }))
+    fireEvent.click(screen.getAllByRole('button', { name: 'Sign score confirmation' })[0])
+    fireEvent.click(screen.getByRole('button', { name: 'Increase home score' }))
+    expect(screen.queryByRole('img', { name: 'Home coach recorded signature' })).toBeNull()
+    expect(screen.getByRole('img', { name: 'Home coach signature pad' }).querySelectorAll('polyline')).toHaveLength(0)
+    expect(screen.getAllByRole('button', { name: 'Sign score confirmation' })[0]).toBeDisabled()
+    expect(screen.getByRole('button', { name: 'Finalize game' })).toBeDisabled()
+  })
+
+  it('shows a referee launchpad with AskRef, GameCard and ScoreBoard actions', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /^Referee/ }))
     const launchpad = screen.getByRole('region', { name: 'Referee tools' })
-    expect(launchpad.querySelectorAll('button')).toHaveLength(2)
+    expect(launchpad.querySelectorAll('button')).toHaveLength(3)
     expect(within(launchpad).getByRole('button', { name: /AskRef/ })).toBeTruthy()
     expect(within(launchpad).getByRole('button', { name: /GameCard/ })).toBeTruthy()
+    expect(within(launchpad).getByRole('button', { name: /ScoreBoard/ })).toBeTruthy()
     fireEvent.click(within(launchpad).getByRole('button', { name: /GameCard/ }))
-    expect(screen.getByRole('heading', { name: 'ScoreBoard' })).toBeTruthy()
+    expect(screen.getByRole('heading', { name: 'GameCard' })).toBeTruthy()
   })
 
   it('shows jersey numbers in both the draft pool and selected roster', () => {
@@ -524,22 +728,25 @@ describe('PlayerSmart phase-one preview', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Consolidate U10 coach evaluations' }))
     fireEvent.click(screen.getByRole('button', { name: /^Draft/ }))
     fireEvent.click(screen.getByRole('button', { name: 'Start draft' }))
-    expect(screen.getAllByText('Eval #12').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Eval #01').length).toBeGreaterThan(0)
     expect(screen.getByText('Coach 1', { selector: '.draft-turn-indicator strong' })).toBeTruthy()
-    fireEvent.change(screen.getByRole('combobox', { name: 'Draft demo access' }), { target: { value: 'Coach' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Coach view' }))
+    const selection = screen.getByRole('combobox', { name: 'Select player to draft' })
+    const harper = within(selection).getByRole('option', { name: /Harper Lane/ }) as HTMLOptionElement
+    fireEvent.change(selection, { target: { value: harper.value } })
     fireEvent.click(screen.getByRole('button', { name: 'Make coach pick' }))
-    expect(screen.getAllByText('Eval #12').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Eval #01').length).toBeGreaterThan(0)
     expect(screen.getAllByText('Jordan Lee').length).toBeGreaterThan(0)
     const jerseyInput = screen.getByRole('textbox', { name: 'Jersey number for Harper Lane in Fall 2026' })
     expect(jerseyInput).toHaveValue('')
     fireEvent.change(jerseyInput, { target: { value: '37' } })
     expect(jerseyInput).toHaveValue('37')
-    expect(screen.getAllByText('Eval #12').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Eval #01').length).toBeGreaterThan(0)
     fireEvent.click(screen.getByRole('button', { name: 'My Team' }))
     expect(within(screen.getByRole('list', { name: 'Coach 1 players' })).getByText('Harper Lane')).toBeTruthy()
     expect(screen.queryByRole('list', { name: 'Riley Morgan players' })).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: /^Draft/ }))
-    fireEvent.change(screen.getByRole('combobox', { name: 'Draft demo access' }), { target: { value: 'Admin' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Back to administrator' }))
     fireEvent.click(screen.getByRole('button', { name: 'End draft' }))
     fireEvent.click(screen.getByRole('button', { name: 'My Team' }))
     expect(screen.getByRole('heading', { name: 'Harper Lane' })).toBeTruthy()
@@ -548,4 +755,169 @@ describe('PlayerSmart phase-one preview', () => {
     fireEvent.click(screen.getByRole('button', { name: /^Draft/ }))
     expect(screen.queryByRole('button', { name: 'Make coach pick' })).toBeNull()
   }, 30000)
+})
+
+
+describe('AskRef chat interface', () => {
+  afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals() })
+
+  it('clarifies an expanded throw-in alias and displays optional restart and discipline details', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    const composer = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
+    fireEvent.change(composer, { target: { value: 'He jumped on the throw' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^Which division is this game in\? I need the division/)
+    fireEvent.change(composer, { target: { value: 'U8' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^U8: At release/)
+    expect(screen.getByRole('log')).toHaveTextContent('teaching retake')
+    const details = screen.getByText('Restart and discipline details').closest('details')!
+    expect(details).not.toHaveAttribute('open')
+    fireEvent.click(screen.getByText('Restart and discipline details'))
+    expect(details).toHaveAttribute('open')
+    expect(details).toHaveTextContent('No cards in U8')
+    expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('uses the supplied guide for division-aware teaching and safe weather explanations without AI', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    const composer = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
+    fireEvent.change(composer, { target: { value: 'But I got the ball first!' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^Which division is this game in\?/)
+    fireEvent.change(composer, { target: { value: 'U8' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^U8: judge the whole challenge/)
+    expect(screen.getByRole('log')).toHaveTextContent('no cards are awarded')
+    fireEvent.change(composer, { target: { value: 'The lightning warning stopped. Can we start immediately?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^The bundled PDSA rule identifies an alarming lightning-detection alarm/)
+    expect(screen.getByRole('log')).toHaveTextContent('not established by this bundled rule text')
+    expect(screen.queryByRole('alert')).toBeNull()
+    expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('answers the new common referee questions locally and clarifies division in the chat', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    const questions: Array<[string, RegExp, boolean?]> = [
+      ['Where do throw-ins get placed?', /spot where the ball crossed the touchline/],
+      ['What divisions get mullegans for throw-ins?', /U8 gets a teaching retake/],
+      ['How do I explain off-sides to U10 players?', /U10 uses offside/],
+      ['Describe the different areas of the field?', /Touchlines \(sidelines\)/],
+      ['When is a goalie restricted from picking up the ball?', /^U10: PDSA awards an indirect free kick/, true],
+      ['How do I describe the difference between a yellow card and a red card?', /yellow is a formal caution/, true],
+      ['When do direct kicks get awarded?', /direct free kicks include/, true],
+      ['When do in-direct kicks get awarded?', /examples include offside/, true],
+      ['What causes the clock to stop in game?', /no added time for ordinary stoppages/],
+    ]
+    for (const [question, expected, clarify] of questions) {
+      fireEvent.click(screen.getByRole('button', { name: 'New chat' }))
+      const composer = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
+      fireEvent.change(composer, { target: { value: question } })
+      fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+      if (clarify) {
+        await screen.findByText(/^Which division is the game in:/)
+        fireEvent.change(composer, { target: { value: 'U10' } })
+        fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+      }
+      await screen.findByText(expected)
+      expect(screen.queryByRole('alert')).toBeNull()
+    }
+    expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('answers the reported U8 goal-kick questions in sequence without an AI service', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    const composer = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
+    fireEvent.change(composer, { target: { value: 'Where do goal kicks get place in u8?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^For U8, place the goal kick anywhere on the goal line/)
+    expect(screen.getByRole('img', { name: 'Restart diagram: goal kick u6 u8' })).toBeTruthy()
+    fireEvent.change(composer, { target: { value: 'what is a goal kick?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^A goal kick is a restart for the defending team/)
+    expect(screen.queryByRole('alert')).toBeNull()
+    expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('shows a readable service error and permits retry after an empty API response', async () => {
+    vi.spyOn(neonAuthHelpers, 'getNeonAuthToken').mockResolvedValue('test-token')
+    const fetchMock = vi.fn().mockImplementation(async () => new Response('', { status: 500 }))
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    fireEvent.change(screen.getByRole('textbox', { name: 'Ask a soccer rules question' }), { target: { value: 'Can you explain an unusual restart?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    expect(await screen.findByRole('alert')).toHaveTextContent(/AI service is unavailable/)
+    expect(screen.getByRole('alert')).not.toHaveTextContent(/json|unexpected end/i)
+    fireEvent.click(screen.getByRole('button', { name: 'Try again' }))
+    expect(await screen.findByRole('alert')).toHaveTextContent(/AI service is unavailable/)
+    expect(fetchMock).toHaveBeenCalledTimes(2)
+  })
+
+  it('answers the U10 game-length question locally without dumping every division or making an AI request', async () => {
+    const fetchMock = vi.fn()
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    const composer = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
+    fireEvent.change(composer, { target: { value: 'what is the game lenght on a U10 games' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^U10 games have two 25-minute halves: 50 minutes/)
+    expect(screen.getByRole('log')).not.toHaveTextContent('U8')
+    expect(screen.getByRole('log')).not.toHaveTextContent('U12')
+    expect(screen.queryByText('Browse related rulebook excerpts (not an AI answer)')).toBeNull()
+    expect(fetchMock).not.toHaveBeenCalled()
+    fireEvent.change(composer, { target: { value: 'What about U8?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText(/^U8 games have four 10-minute quarters: 40 minutes/)
+    expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('keeps the question bank and division selectors off the referee screen', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    expect(screen.queryByRole('region', { name: 'Referee practice questions' })).toBeNull()
+    expect(screen.queryByRole('combobox', { name: /division/i })).toBeNull()
+    expect(screen.queryByText('Questions you may hear at the field')).toBeNull()
+    expect(screen.getByRole('textbox', { name: 'Ask a soccer rules question' })).toBeTruthy()
+  })
+
+  it('keeps the conversation and clarification replies in the same composer and starts fresh with New chat', async () => {
+    vi.spyOn(neonAuthHelpers, 'getNeonAuthToken').mockResolvedValue('test-token')
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(Response.json({ division: 'Not specified', clarification: 'Which division is this game?', explanation: 'Which division is this game?', citations: [], ballPlacement: null, diagramId: null, recommendCoordinator: false }))
+      .mockResolvedValueOnce(Response.json({ division: 'U8', explanation: 'U8 plays four 10-minute quarters.', citations: [], ballPlacement: null, diagramId: null, recommendCoordinator: false }))
+      .mockResolvedValueOnce(Response.json({ division: 'All divisions', explanation: 'Shin guards go under socks.', citations: [], ballPlacement: null, diagramId: null, recommendCoordinator: false }))
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /^AskRef/ }))
+    fireEvent.change(screen.getByRole('textbox', { name: 'Ask a soccer rules question' }), { target: { value: 'Can you explain the match duration rule?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText('Which division is this game?')
+    const reply = screen.getByRole('textbox', { name: 'Ask a soccer rules question' })
+    fireEvent.change(reply, { target: { value: 'U8' } })
+    fireEvent.keyDown(reply, { key: 'Enter', code: 'Enter' })
+    await screen.findByText('U8 plays four 10-minute quarters.')
+    expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toEqual({ question: 'U8', history: [{ role: 'user', content: 'Can you explain the match duration rule?' }, { role: 'assistant', content: 'Which division is this game?', clarification: true }] })
+    expect(screen.getByRole('log', { name: 'Conversation with AskRef' })).toHaveTextContent('Can you explain the match duration rule?')
+    fireEvent.click(screen.getByRole('button', { name: 'New chat' }))
+    expect(screen.queryByText('U8 plays four 10-minute quarters.')).toBeNull()
+    fireEvent.change(screen.getByRole('textbox', { name: 'Ask a soccer rules question' }), { target: { value: 'Where do shin guards go?' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Submit rule question' }))
+    await screen.findByText('Shin guards go under socks.')
+    expect(JSON.parse(fetchMock.mock.calls[2][1].body)).toEqual({ question: 'Where do shin guards go?', history: [] })
+  })
 })

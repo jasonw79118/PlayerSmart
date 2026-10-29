@@ -1,0 +1,55 @@
+import { fireEvent, render, screen, within } from '@testing-library/react'
+import { describe, expect, it } from 'vitest'
+import App from './App'
+
+describe('referee button workspace', () => {
+  it('starts at RefHome with three tools and a theme toggle, without application navigation', () => {
+    const { container } = render(<App initialAccess="Referee" />)
+    expect(screen.getByRole('heading', { name: 'RefHome' })).toBeTruthy()
+    expect(container.querySelector('.sidebar')).toBeNull()
+    expect(container.querySelector('.topbar')).toBeNull()
+    expect(container.querySelector('.page-footer')).toBeNull()
+    const home = screen.getByRole('region', { name: 'Referee tools' })
+    expect(within(home).getAllByRole('button')).toHaveLength(3)
+    expect(screen.getAllByRole('button')).toHaveLength(4)
+    const before = document.documentElement.dataset.theme
+    fireEvent.click(screen.getByRole('button', { name: /^Switch to/ }))
+    expect(document.documentElement.dataset.theme).not.toBe(before)
+  })
+  it('returns home from all three screens, preserves match edits and keeps ScoreBoard read-only', () => {
+    const { container } = render(<App initialAccess="Referee" />)
+    fireEvent.click(screen.getByRole('button', { name: /GameCard/ }))
+    expect(screen.getByRole('heading', { name: 'GameCard' })).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Increase home score' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Back to RefHome' }))
+    fireEvent.click(screen.getByRole('button', { name: /ScoreBoard/ }))
+    expect(screen.getByRole('heading', { name: 'ScoreBoard' })).toBeTruthy()
+    expect(screen.queryByRole('button', { name: 'Increase home score' })).toBeNull()
+    expect(container.querySelector('.guest-scoreline strong')).toHaveTextContent('3')
+    fireEvent.click(screen.getByRole('button', { name: 'Back to RefHome' }))
+    fireEvent.click(screen.getByRole('button', { name: /AskRef/ }))
+    expect(screen.getByRole('heading', { name: 'AskRef' })).toBeTruthy()
+    expect(container.querySelector('.topbar')).toBeNull()
+    fireEvent.click(screen.getByRole('button', { name: 'Back to RefHome' }))
+    expect(screen.getByRole('heading', { name: 'RefHome' })).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: /GameCard/ }))
+    expect(container.querySelector('.gamescore-score strong')).toHaveTextContent('3')
+  })
+  it('records actual game start and end once and retains them when returning to the card', () => {
+    const {container}=render(<App initialAccess="Referee" />)
+    fireEvent.click(screen.getByRole('button',{name:/GameCard/}))
+    expect(screen.getByRole('button',{name:'End game'})).toBeDisabled()
+    fireEvent.click(screen.getByRole('button',{name:'Start game'}))
+    expect(screen.getByRole('button',{name:'Start game'})).toBeDisabled()
+    expect(screen.getByRole('button',{name:'End game'})).toBeEnabled()
+    fireEvent.click(screen.getByRole('button',{name:'End game'}))
+    expect(screen.getByRole('button',{name:'End game'})).toBeDisabled()
+    const timestamp=container.querySelector('.gamescore-card .schedule-actions + p')?.textContent
+    expect(timestamp).toContain('Actual start:')
+    expect(timestamp).not.toContain('Not started')
+    expect(timestamp).not.toContain('Not ended')
+    fireEvent.click(screen.getByRole('button',{name:'Back to RefHome'}))
+    fireEvent.click(screen.getByRole('button',{name:/GameCard/}))
+    expect(container.querySelector('.gamescore-card .schedule-actions + p')?.textContent).toBe(timestamp)
+  })
+})

@@ -1,0 +1,202 @@
+import { useState } from 'react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+
+beforeEach(() => { vi.useFakeTimers({ toFake: ['Date'] }); vi.setSystemTime(new Date('2030-05-31T12:00:00Z')) })
+afterEach(() => vi.useRealTimers())
+import { MatchScheduler } from './MatchScheduler'
+import type { ScoreGame } from '../lib/score-game'
+import type { ScheduleSettings } from '../lib/match-scheduler'
+import type { RefereeProfile } from '../lib/referees'
+
+const coaches = ['Coach A', 'Coach B', 'Coach C', 'Coach D', 'Coach E']
+const staff = Object.fromEntries(coaches.map((coach, index) => [`U10:${coach}`, { headCoach: coach, assistantCoach: '', teamNickname: `Team ${index + 1}`, jerseyColor: '#2878d0' }]))
+function fixture(id: string, homeCoach = 'Coach A', awayCoach = 'Coach B'): ScoreGame {
+  return { id, division: 'U10', date: '2030-06-01', kickoff: '09:00', time: '9:00 AM', field: '1', durationMinutes: 55, turnaroundMinutes: 10, scheduleStatus: 'scheduled', homeCoach, awayCoach, homeTeam: homeCoach, awayTeam: awayCoach, homeColor: '#2878d0', awayColor: '#2878d0', homePlayers: 0, awayPlayers: 0, homeScore: 0, awayScore: 0, referee: '', homeSigned: false, awaySigned: false, homeSignedAt: '', awaySignedAt: '', homeSignatureName: '', awaySignatureName: '', finalized: false }
+}
+function Harness({ initial = [], referees = [] }: { initial?: ScoreGame[]; referees?: RefereeProfile[] }) {
+  const [games, setGames] = useState(initial)
+  const [settingsByDivision, setSettings] = useState<Record<string, ScheduleSettings>>({})
+  return <><MatchScheduler divisions={['U8 Boys', 'U8 Girls', 'U10', 'U12', 'U14', 'U18']} coaches={{ U10: coaches }} teamCounts={{ U10: 5 }} staff={staff} games={games} setGames={setGames} referees={referees} settingsByDivision={settingsByDivision} setSettings={setSettings} seasonStart="2030-06-01" seasonEnd="2030-08-31" /><output aria-label="Stored games">{JSON.stringify(games)}</output><button onClick={() => setGames((current) => [...current, { ...fixture('outside'), division: 'U12', field: '8' }])}>Another Admin schedules a match</button></>
+}
+const stored = () => JSON.parse(screen.getByLabelText('Stored games').textContent!) as ScoreGame[]
+
+describe('administrator match scheduler', () => {
+  it('starts with a compact match list, filters fixtures and keeps actions in the selected match', () => {
+    const initial=[fixture('regular'),{...fixture('tournament'),phase:'tournament' as const,tournamentRound:1},{...fixture('final'),finalized:true}]
+    render(<Harness initial={initial}/>);
+    expect(screen.queryByRole('spinbutton',{name:'Coach rest minutes'})).toBeNull()
+    expect(screen.getByRole('button',{name:'Edit scheduling settings'})).toHaveAttribute('aria-expanded','false')
+    expect(screen.queryByRole('button',{name:'Postpone division match day'})).toBeNull()
+    expect(screen.queryByRole('combobox',{name:'Referee for match regular'})).toBeNull()
+    fireEvent.change(screen.getByLabelText('Filter matches by competition'),{target:{value:'tournament'}})
+    expect(screen.getByRole('button',{name:'Manage match tournament'})).toBeTruthy()
+    expect(screen.queryByRole('button',{name:'Manage match regular'})).toBeNull()
+    const trigger=screen.getByRole('button',{name:'Manage match tournament'})
+    fireEvent.click(trigger)
+    expect(screen.getByRole('region',{name:'Manage selected match'})).toHaveFocus()
+    expect(screen.getByLabelText('Referee for match tournament')).toBeVisible()
+    fireEvent.click(screen.getByRole('button',{name:'Close match details'}))
+    expect(trigger).toHaveFocus()
+    fireEvent.change(screen.getByLabelText('Filter matches by competition'),{target:{value:'all'}})
+    fireEvent.change(screen.getByLabelText('Filter matches by status'),{target:{value:'final'}})
+    expect(screen.getByRole('button',{name:'Manage match final'})).toBeDisabled()
+    expect(screen.queryByRole('button',{name:'Manage match regular'})).toBeNull()
+    expect(stored()).toEqual(initial)
+  })
+  it('uses explicitly ordered backup days for replacements and keeps Sunday and Wednesday avoided', () => {
+    render(<Harness initial={[fixture('rainout')]} />)
+    fireEvent.click(screen.getByRole('button',{name:'Edit scheduling settings'}))
+    fireEvent.click(screen.getByText('Postpone a division match day',{selector:'summary'}))
+    expect(screen.getByRole('checkbox', { name: 'Avoid Sunday' })).toBeChecked()
+    expect(screen.getByRole('checkbox', { name: 'Avoid Wednesday' })).toBeChecked()
+    fireEvent.change(screen.getByLabelText('Last match date'), { target: { value: '2030-06-07' } })
+    fireEvent.change(screen.getByLabelText('Alternative match day'), { target: { value: '5' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Add alternative day' }))
+    fireEvent.change(screen.getByLabelText('Alternative match day'), { target: { value: '2' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Add alternative day' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Move Tuesday earlier' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Manage match rainout' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Postpone match' }))
+    fireEvent.click(screen.getAllByRole('button', { name: 'Preview this replacement' })[0])
+    fireEvent.click(screen.getByRole('button', { name: 'Apply schedule' }))
+    expect(stored()[0].date).toBe('2030-06-04')
+  })
+  it('previews available referee assignments and permits an explicit manual change', () => {
+    const referees: RefereeProfile[] = [{ id: 'chris', name: 'Chris James', phone: '', email: '', preferredContact: '', active: true, divisions: ['U10'], unavailableDates: [], notes: '', backgroundChecks: { 'fall-2029': { conductedOn: '2029-08-01', verifiedAt: '2029-08-02T12:00:00Z', verifiedBy: 'Admin' } }, availability: [{ id: 'sat', weekdays: [6], startTime: '09:00', endTime: '15:00', startDate: '', endDate: '' }] }]
+    render(<Harness initial={[fixture('one')]} referees={referees} />)
+    fireEvent.click(screen.getByRole('button',{name:'Edit scheduling settings'}))
+    fireEvent.click(screen.getByText('Postpone a division match day',{selector:'summary'}))
+    fireEvent.change(screen.getByLabelText('Coach rest minutes'), { target: { value: '90' } })
+    fireEvent.change(screen.getByLabelText('Referee rest minutes'), { target: { value: '5' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Assign available referees' }))
+    expect(stored()[0].referee).toBe('')
+    expect(screen.getByRole('region', { name: 'Schedule preview' })).toHaveTextContent('Chris James')
+    fireEvent.click(screen.getByRole('button', { name: 'Apply schedule' }))
+    expect(stored()[0]).toMatchObject({ referee: 'Chris James', refereeId: 'chris', coachRestMinutes: 90, refereeRestMinutes: 5 })
+    fireEvent.click(screen.getByRole('button',{name:'Manage match one'}))
+    fireEvent.change(screen.getByLabelText('Referee for match one'), { target: { value: '' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Preview referee for match one' }))
+    expect(stored()[0].referee).toBe('Chris James')
+    fireEvent.click(screen.getByRole('button', { name: 'Apply schedule' }))
+    expect(stored()[0].referee).toBe('')
+  })
+  it('keeps every division’s age format, scheduling parameters and weather controls separate', () => {
+    render(<Harness />)
+    fireEvent.click(screen.getByRole('button',{name:'Edit scheduling settings'}))
+    fireEvent.click(screen.getByText('Postpone a division match day',{selector:'summary'}))
+    const divisions = ['U8 Boys', 'U8 Girls', 'U10', 'U12', 'U14', 'U18']
+    expect(screen.queryByRole('combobox', { name: 'Schedule division' })).toBeNull()
+    expect(within(screen.getByRole('tablist', { name: 'Division schedules' })).getAllByRole('tab')).toHaveLength(6)
+    divisions.forEach((division, index) => {
+      fireEvent.click(screen.getByRole('tab', { name: division }))
+      expect(screen.getByRole('heading', { name: `${division} scheduling controls` })).toBeTruthy()
+      expect(screen.getByLabelText('First match date')).toHaveValue('2030-06-01')
+      expect(screen.getByLabelText('Minimum days between team matches')).toHaveValue(0)
+      const mapped = index < 2 ? ['7A', '6', '7'] : division === 'U10' ? ['1A', '1', '2'] : ['8']
+      for (const field of mapped) expect(screen.getByRole('checkbox', { name: `Use field ${field}` })).toBeChecked()
+      fireEvent.change(screen.getByLabelText('First match date'), { target: { value: `2030-06-0${index + 1}` } })
+      fireEvent.change(screen.getByLabelText('Last match date'), { target: { value: `2030-08-2${index}` } })
+      fireEvent.change(screen.getByLabelText('Earliest kickoff'), { target: { value: `${String(index + 8).padStart(2, '0')}:00` } })
+      fireEvent.change(screen.getByLabelText('Field closes'), { target: { value: '20:00' } })
+      fireEvent.change(screen.getByLabelText('Specific kickoff times'), { target: { value: `${String(index + 9).padStart(2, '0')}:00` } })
+      for (const field of mapped.slice(1)) fireEvent.click(screen.getByRole('checkbox', { name: `Use field ${field}` }))
+      fireEvent.change(screen.getByLabelText('Turnaround minutes'), { target: { value: String(index + 5) } })
+      fireEvent.change(screen.getByLabelText('Coach rest minutes'), { target: { value: String(index + 30) } })
+      fireEvent.change(screen.getByLabelText('Referee rest minutes'), { target: { value: String(index + 5) } })
+      fireEvent.change(screen.getByLabelText('Minimum days between team matches'), { target: { value: String(index) } })
+      fireEvent.change(screen.getByLabelText('Games per team per day'), { target: { value: String(1 + index % 3) } })
+      fireEvent.change(screen.getByLabelText('Round-robin cycles'), { target: { value: String(1 + index % 4) } })
+      if (index === 0 || index === 3) fireEvent.click(screen.getByRole('checkbox', { name: `Avoid ${index === 0 ? 'Sunday' : 'Wednesday'}` }))
+      fireEvent.change(screen.getByLabelText('Primary match day'), { target: { value: String(index) } })
+      fireEvent.change(screen.getByLabelText('Unavailable division dates'), { target: { value: `2030-06-2${index}` } })
+      fireEvent.change(screen.getByLabelText('Day closure reason'), { target: { value: `${division} closure` } })
+      fireEvent.change(screen.getByLabelText('Date to postpone'), { target: { value: `2030-07-0${index + 1}` } })
+    })
+    divisions.forEach((division, index) => {
+      fireEvent.click(screen.getByRole('tab', { name: division }))
+      expect(screen.getByRole('tab', { name: division })).toHaveAttribute('aria-selected', 'true')
+      expect(screen.getByLabelText('First match date')).toHaveValue(`2030-06-0${index + 1}`)
+      expect(screen.getByLabelText('Last match date')).toHaveValue(`2030-08-2${index}`)
+      expect(screen.getByLabelText('Earliest kickoff')).toHaveValue(`${String(index + 8).padStart(2, '0')}:00`)
+      expect(screen.getByLabelText('Specific kickoff times')).toHaveValue(`${String(index + 9).padStart(2, '0')}:00`)
+      const mapped = index < 2 ? ['7A', '6', '7'] : division === 'U10' ? ['1A', '1', '2'] : ['8']
+      expect(screen.getByRole('checkbox', { name: `Use field ${mapped[0]}` })).toBeChecked()
+      for (const field of mapped.slice(1)) expect(screen.getByRole('checkbox', { name: `Use field ${field}` })).not.toBeChecked()
+      expect(screen.getByLabelText('Turnaround minutes')).toHaveValue(index + 5)
+      expect(screen.getByLabelText('Coach rest minutes')).toHaveValue(index + 30)
+      expect(screen.getByLabelText('Referee rest minutes')).toHaveValue(index + 5)
+      expect(screen.getByLabelText('Minimum days between team matches')).toHaveValue(index)
+      expect(screen.getByLabelText('Games per team per day')).toHaveValue(1 + index % 3)
+      expect(screen.getByLabelText('Round-robin cycles')).toHaveValue(String(1 + index % 4))
+      expect(screen.getByLabelText('Primary match day')).toHaveValue(String(index))
+      expect(screen.getByLabelText('Unavailable division dates')).toHaveValue(`2030-06-2${index}`)
+      expect(screen.getByLabelText('Day closure reason')).toHaveValue(`${division} closure`)
+      expect(screen.getByLabelText('Date to postpone')).toHaveValue(`2030-07-0${index + 1}`)
+      expect(screen.getByText(`${division}: ${index < 2 ? 49 : division === 'U10' ? 55 : 65} minutes including breaks`)).toBeTruthy()
+    })
+  })
+  it('previews five-team scheduling, cancels with a reason, and applies a suggested replacement without duplicating fixtures', () => {
+    render(<Harness />)
+    fireEvent.click(screen.getByRole('button',{name:'Edit scheduling settings'}))
+    fireEvent.click(screen.getByText('Postpone a division match day',{selector:'summary'}))
+    expect(screen.getByText('U10: 55 minutes including breaks')).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Build schedule preview' }))
+    expect(stored()).toHaveLength(0)
+    expect(within(screen.getByRole('region', { name: 'Schedule preview' })).getAllByRole('row')).toHaveLength(11)
+    fireEvent.click(screen.getByRole('button', { name: 'Apply schedule' }))
+    expect(stored()).toHaveLength(10)
+    expect(stored().every((game) => game.durationMinutes === 55 && game.scheduleStatus === 'scheduled')).toBe(true)
+    expect(screen.queryByRole('button', { name: 'Build schedule preview' })).toBeNull()
+    const original = stored()[0]
+    fireEvent.click(screen.getByRole('button', { name: `Manage match ${original.id}` }))
+    fireEvent.click(screen.getByRole('button', { name: 'Cancel match' }))
+    expect(stored().find((game) => game.id === original.id)).toMatchObject({ scheduleStatus: 'cancelled', scheduleReason: 'Weather' })
+    expect(screen.getByLabelText('Unavailable division dates')).toHaveValue(original.date)
+    const suggestions = screen.getAllByRole('button', { name: 'Preview this replacement' })
+    expect(suggestions.length).toBeGreaterThan(0)
+    fireEvent.click(suggestions[0])
+    expect(stored().find((game) => game.id === original.id)?.scheduleStatus).toBe('cancelled')
+    fireEvent.click(screen.getByRole('button', { name: 'Apply schedule' }))
+    const replacement = stored().find((game) => game.id === original.id)!
+    expect(replacement.scheduleStatus).toBe('scheduled')
+    expect(replacement.date).not.toBe(original.date)
+    expect(replacement.scheduleHistory).toHaveLength(2)
+    expect(replacement.scheduleHistory?.[0].reason).toBe('Weather')
+    expect(stored()).toHaveLength(10)
+  })
+  it('postpones a weather day and only applies a complete revised schedule, preserving results and other divisions', () => {
+    const final = { ...fixture('final'), finalized: true, homeScore: 2 }
+    const postponed = { ...fixture('pending', 'Coach C', 'Coach D'), field: '2' }
+    const other = { ...fixture('other'), division: 'U12', field: '8' }
+    render(<Harness initial={[final, postponed, other]} />)
+    fireEvent.click(screen.getByRole('button',{name:'Edit scheduling settings'}))
+    fireEvent.click(screen.getByText('Postpone a division match day',{selector:'summary'}))
+    expect(screen.getByRole('button', { name: 'Manage match final' })).toBeDisabled()
+    fireEvent.change(screen.getByLabelText('Last match date'), { target: { value: '2030-06-01' } })
+    fireEvent.change(screen.getByLabelText('Date to postpone'), { target: { value: '2030-06-01' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Postpone division match day' }))
+    expect(stored().find((game) => game.id === 'final')).toEqual(final)
+    expect(stored().find((game) => game.id === 'other')).toEqual(other)
+    expect(stored().find((game) => game.id === 'pending')?.scheduleStatus).toBe('postponed')
+    fireEvent.click(screen.getByRole('button', { name: 'Rework remaining schedule' }))
+    expect(screen.getByRole('button', { name: 'Apply schedule' })).toBeDisabled()
+    expect(screen.getByText(/1 matches could not fit/)).toBeTruthy()
+    fireEvent.change(screen.getByLabelText('Last match date'), { target: { value: '2030-06-15' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Rework remaining schedule' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Apply schedule' }))
+    expect(stored().find((game) => game.id === 'pending')).toMatchObject({ scheduleStatus: 'scheduled', date: '2030-06-08' })
+    expect(stored().find((game) => game.id === 'final')).toEqual(final)
+    expect(stored().find((game) => game.id === 'other')).toEqual(other)
+  })
+  it('rejects stale proposals when another administrator changes fixtures', () => {
+    render(<Harness />)
+    fireEvent.click(screen.getByRole('button',{name:'Edit scheduling settings'}))
+    fireEvent.click(screen.getByText('Postpone a division match day',{selector:'summary'}))
+    fireEvent.click(screen.getByRole('button', { name: 'Build schedule preview' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Another Admin schedules a match' }))
+    expect(screen.getByRole('button', { name: 'Apply schedule' })).toBeDisabled()
+    expect(screen.getByRole('alert')).toHaveTextContent('Build a fresh preview')
+    expect(stored()).toHaveLength(1)
+  })
+})

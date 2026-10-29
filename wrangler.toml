@@ -7,3 +7,8 @@ binding = "AI"
 
 [vars]
 AI_GATEWAY_ID = "playersmart-askref"
+
+# After deploying the AskRef Worker, enable this service binding and redeploy Pages:
+# [[services]]
+# binding = "ASKREF_WORKER"
+# service = "playersmart-askref"

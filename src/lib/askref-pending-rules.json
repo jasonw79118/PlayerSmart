@@ -1,0 +1,13 @@
+[
+  {
+    "id": "IFAB-2026-27-LAW-15-COUNTDOWN",
+    "edition": "2026/27",
+    "status": "pending-pdsa-adoption",
+    "active": false,
+    "url": "https://downloads.theifab.com/downloads/laws-of-the-game-202627-single-pages?l=en",
+    "protocolUrl": "https://theifab.com/laws/latest/throw-in-and-goal-kick-countdown-protocol/",
+    "summary": "For unfair delay, the referee starts a visible five-second throw-in countdown; expiry gives the throw to the opponents. This is distinct from an incorrectly delivered throw.",
+    "checkedOn": "2026-10-29",
+    "adoptionEvidence": "The checked PDSA Issue 09 PDF adopts IFAB 2025/26. No PDSA adoption of the 2026/27 countdown was established."
+  }
+]

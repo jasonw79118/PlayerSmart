@@ -7,11 +7,14 @@
     "dev": "vite",
     "dev:api": "node --env-file=.env.local server/index.mjs",
     "dev:pages": "npm run build && wrangler pages dev dist --port 5188 --ai AI",
-    "build": "tsc -b && tsc --noEmit --target ES2022 --module ESNext --moduleResolution bundler --lib ES2022,DOM --skipLibCheck functions/api/askref.ts functions/api/me.ts && vite build",
+    "build": "tsc -b && tsc --noEmit --target ES2022 --module ESNext --moduleResolution bundler --lib ES2022,DOM --skipLibCheck --resolveJsonModule --allowSyntheticDefaultImports functions/api/askref.ts functions/api/me.ts workers/askref.ts && vite build",
     "deploy:pages": "npm run build && wrangler pages deploy dist --project-name playersmart-preview",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "dev:askref": "wrangler dev --config wrangler.askref.toml --port 5188",
+    "askref:review": "node scripts/askref-review.mjs",
+    "check:askref-worker": "wrangler deploy --config wrangler.askref.toml --dry-run --outdir dist/askref-worker"
   },
   "dependencies": {
     "@neon/config": "^1.9.5",

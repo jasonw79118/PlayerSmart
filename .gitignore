@@ -9,3 +9,6 @@ dist/
 coverage/
 *.local
 .neon
+
+# Local inspection and rule-check scratch files
+tmp/

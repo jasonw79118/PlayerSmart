@@ -10,6 +10,7 @@ export type RuleSourceEntry = {
   reviewedOn: string
   verified: boolean
   keywords: string[]
+  documentUrl?: string
 }
 
 const sourceName = 'Palo Duro Soccer Association Official Laws of the Game (provided PDF)'
@@ -120,3 +121,22 @@ export const pdsaRulesKnowledge: RuleSourceEntry[] = [
     reviewedBy: 'Provided PDSA rulebook', reviewedOn: '2026-02-01', verified: true, keywords: ['standings', 'points', 'win', 'loss', 'tie', 'tiebreaker', 'seed', 'goal differential'],
   },
 ]
+
+// Additional details checked against the publicly available Issue 09 PDF on
+// 2026-10-29. This source check is not a coordinator approval of answer drafts.
+const originalDocumentUrl = 'https://crossbar.s3.amazonaws.com/organizations/1035/uploads/c76604f7-8063-4404-aa0a-86e5f9c0080b.pdf?versionId=f4H7l_ZjFXeughCbE._w4H6JYF59lRrp'
+const checkedDetails: Record<string, string> = {
+  'pdsa-law-3-players': ' U6 and U8 have no goalkeeper; U10 and older use a goalkeeper. Older divisions may substitute on either team’s goal kick, goal, caution or injury; on their own corner or throw-in; and the opponents may also substitute if the team taking that corner or throw-in substitutes. Substitutes wait at midfield and enter when summoned. Halftime substitutions do not require alerting the referee. If a coach enters for an injury, that player leaves and may re-enter after play restarts through the proper substitution procedure. A team may play down at most one player when short, not for convenient subbing; inform the center referee and change at the start or a quarter/halftime break, with injury exceptions. Both coaches match the reduced numbers.',
+  'pdsa-law-4-equipment': ' Original Law 4 check: small stud earrings may be worn if covered with tape or equivalent. The text otherwise requires Referee Coordinator or Board approval for jewellery exceptions. Confirm ambiguous equipment or safety questions with those officials; ordinary tape is not blanket permission for all jewellery.',
+  'pdsa-law-12-fouls': ' The match clock must not be stopped for injury regardless of severity; stopping play for safety is separate. PDSA does not adopt the IFAB non-deliberate-handball goal/promising-attack disciplinary exception; confirm its application with the Referee Coordinator for a specific incident.',
+  'pdsa-law-15-throw-in': ' For U6 kick-ins, put the ball on or outside the touchline and play it onto the field. Another player must touch it before the kicker plays it again. U6 kick-in mulligans are unlimited all season; after multiple unsuccessful attempts the coach should choose another kicker. A throw directly into the opponents’ goal gives a goal kick; directly into the thrower’s own goal gives a corner.',
+  'pdsa-law-16-goal-kick': ' A goal may be scored from a goal kick. The general location is within the goal area and opponents stay outside the penalty area until it is in play; the stated U6/U8 goal-line and own-half modifications take priority.',
+}
+for (const [id, text] of Object.entries(checkedDetails)) {
+  const source = pdsaRulesKnowledge.find((entry) => entry.id === id)!
+  if (id === 'pdsa-law-4-equipment') source.text = source.text.replace('Jewelry is prohibited except small stud earrings approved by the Referee Coordinator or Board Member and covered with tape or equivalent.', 'PDSA permits small stud earrings covered with tape or equivalent; other jewelry exceptions require Referee Coordinator or Board approval.')
+  source.text += text
+  source.documentUrl = originalDocumentUrl
+  source.reviewedOn = '2026-10-29'
+  source.reviewedBy = 'Source check against public Issue 09 PDF; answer approval remains separate'
+}

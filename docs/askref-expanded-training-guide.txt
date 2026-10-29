@@ -1,0 +1,250 @@
+Expanded PDSA referee Q&A bank
+Questions 76–175 • Additions to the original 75
+Section 10: Throw-ins — 30 additional questions
+This should be one of the largest categories because improper throw-ins are common in younger divisions.
+The four basic throw-in requirements
+At the moment the ball is released, the player must:
+1. Face the field of play.
+2. Have part of both feet on the touchline or on the ground outside it.
+3. Use both hands to throw the ball from behind and over the head.
+4. Take the throw from the point where the ball left the field.
+IFAB Law 15. 
+IFAB
+
+
+Foot placement and body movement
+#	Question	Correct answer
+76	"The player's back foot came off the ground during the throw. Is that legal?"	No, if it was off the ground when the ball was released. The opposing team receives the throw-in, subject to advantage.
+77	"What if the player's heel lifted but their toes stayed on the ground?"	Legal, provided part of each foot remains grounded on or behind the touchline at release.
+78	"Can a player cross their legs while taking a throw-in?"	Yes. No rule requires feet to be uncrossed. Both feet must satisfy the grounding and positioning requirements.
+79	"Do both feet have to be side by side?"	No. A staggered stance is allowed.
+80	"Can a player put one foot in front of the other?"	Yes. The position is legal as long as both feet meet Law 15.
+81	"Can the thrower step forward?"	Yes, including approaching with steps, but the foot requirements must be satisfied at release.
+82	"Can a player take a running throw-in?"	Yes, if the player completes the throw correctly.
+83	"Can both feet be on the touchline?"	Yes.
+84	"Can one foot be on the line and the other behind it?"	Yes.
+85	"Can both feet be completely outside the field?"	Yes.
+86	"What if one foot is completely inside the field without touching the line?"	Illegal throw-in. The opponents receive the throw if it enters play, subject to advantage.
+87	"The player's toes were inside the field but their heels touched the line. Is that legal?"	Yes. Part of each foot touching the line is enough.
+88	"Can the player jump while taking the throw?"	Both feet must be grounded at the instant of release. Jumping into the air before releasing the ball makes the throw illegal.
+89	"What if the player jumped immediately after releasing the ball?"	Legal, assuming both feet were correctly grounded at release.
+90	"Does the player have to keep both feet completely flat?"	No. Toes or heels may be lifted, provided part of each foot remains grounded correctly at release.
+
+Hands, ball movement, and delivery
+#	Question	Correct answer
+91	"Can a player throw with one hand?"	No. Both hands must be used.
+92	"Does the ball have to go behind the player's head?"	Yes. It must be thrown from behind and over the head.
+93	"Can the player throw the ball sideways from their shoulder?"	No. That doesn't meet the prescribed throwing motion.
+94	"Does the ball have to travel a certain distance?"	No minimum distance, but it must enter the field of play.
+95	"Can the ball be thrown directly at the ground?"	Yes, if it is properly thrown and enters the field before touching the ground. Simply dropping the ball is not a legal throw.
+96	"The ball bounced outside the touchline before entering. What happens?"	The same team retakes the throw from the same position.
+97	"The player threw the ball, but it never crossed into the field. What happens?"	The same team retakes it.
+98	"Can a player throw the ball directly into the goal?"	It cannot score directly. Into the opponents' goal means a goal kick; into their own means a corner kick.
+99	"Can a player throw the ball into their goalkeeper's hands?"	The goalkeeper cannot legally handle a throw-in received directly from a teammate. An indirect free kick is awarded.
+100	"Can the player who threw the ball touch it immediately again?"	No, unless another player has touched it first. Otherwise, an indirect free kick is generally awarded.
+
+Opponents, positioning, and enforcement
+#	Question	Correct answer
+101	"Can a defender stand right in front of the thrower?"	Opponents must remain at least 2 yards (2 meters) away from the throw-in location.
+102	"Can an opponent jump and wave their arms to distract the thrower?"	Unfair distraction or interference is an offence. A caution may be required.
+103	"Can a player take the throw several yards away from where the ball went out?"	No. It must be taken from the appropriate location.
+104	"Can the referee allow play to continue after an illegal throw?"	Yes, if the ball entered play and advantage clearly benefits the non-offending team.
+105	"Can a player do a flip throw-in?"	Yes, provided the actual release meets all the throw-in requirements.
+
+Source for questions 76–105: IFAB Law 15 and official throw-in FAQs. 
+IFAB+1
+
+A clarification referees must understand
+
+Under IFAB, an improperly performed throw-in that enters the field generally goes to the opponents. But a properly delivered throw that never enters the field is retaken by the same team.
+
+In younger PDSA divisions, verify whether an instructional retake is allowed before applying the normal turnover rule.
+
+Section 11: Goal kicks, corner kicks, and free kicks
+#	Question	Correct answer
+106	"Can a defender take a goal kick instead of the goalkeeper?"	Yes. Any player on the defending team may take it.
+107	"Where can the ball be placed for a goal kick?"	Anywhere inside the goal area, unless PDSA modifies the procedure.
+108	"Does the goal kick have to leave the penalty area?"	No. The ball is in play once kicked and clearly moving.
+109	"Can opponents enter the penalty area before a goal kick?"	They generally must remain outside until the ball is in play. Special provisions apply when a quick goal kick is taken before they can leave.
+110	"Can someone score directly from a goal kick?"	Yes, against the opponents.
+111	"What happens if a goal kick goes directly into the kicker's own goal?"	Corner kick to the opponents.
+112	"Can a teammate receive the goal kick inside the penalty area?"	Yes, under IFAB.
+113	"Can the goalkeeper pick up the ball after taking a goal kick?"	Not before another player touches it. Handling may result in an indirect free kick if inside the goalkeeper's own penalty area.
+114	"Does the ball have to be completely inside the corner arc?"	No. Part of the ball may be touching or overhanging the arc's boundary.
+115	"Can players move the corner flag to make room?"	No.
+116	"How far away must opponents stand on a corner kick?"	At least 10 yards from the corner arc until the ball is in play, unless PDSA modifies the distance.
+117	"Can a corner kick be passed backward?"	Yes. There is no requirement to kick it toward the goal.
+118	"Can a player score directly from a free kick?"	From a direct free kick, yes. From an indirect free kick, the ball must touch another player first.
+119	"Why is the referee holding one arm in the air?"	It signals an indirect free kick.
+120	"How far must defenders stand from a free kick?"	Normally 10 yards, subject to applicable exceptions and youth-field modifications.
+
+IFAB Laws 13, 16 and 17. 
+IFAB+1
+
+Section 12: Fouls, contact, and dangerous play
+#	Question	Correct answer
+121	"Can a player slide tackle?"	Slide tackling is not automatically illegal under IFAB. It becomes an offence if the challenge is careless, reckless, or uses excessive force. PDSA may restrict it by division.
+122	"What if a player slides into someone but touches the ball first?"	Getting the ball first does not automatically excuse an illegal challenge.
+123	"Can a player shield the ball using their body?"	Yes, when the ball is within playing distance and the shielding is otherwise fair.
+124	"Can a player push someone away using their arms?"	An unfair push is a foul.
+125	"Can a player put an arm across an opponent's body?"	It depends. Ordinary positioning may be legal; holding, pushing, or unfairly impeding can be offences.
+126	"Is it a foul if two players collide?"	Not automatically. Evaluate the action and whether an offence occurred.
+127	"Can a player kick the ball above their head?"	Yes, unless the action is dangerous to another player.
+128	"Is a high kick always a foul?"	No. Playing dangerously generally requires a risk of injury that prevents a nearby opponent from playing the ball for fear of injury.
+129	"Can a player use their knee to control the ball?"	Yes.
+130	"Can a player use their chest or stomach to control the ball?"	Yes.
+131	"Is it a foul to fall on the ball?"	Not automatically. Holding or shielding it unfairly on the ground may become an offence, depending on the circumstances.
+132	"Can a player trap the ball between their legs?"	Not automatically illegal. If doing so creates dangerous play or unfairly prevents an opponent challenging, the referee may intervene.
+133	"What if a player kicks another player's foot while trying to kick the ball?"	A careless kick or challenge can result in a direct free kick.
+134	"What if a player trips over another player's foot?"	Not every fall is a foul. Determine whether the opponent committed an illegal challenge.
+135	"Can the referee call a foul against both players?"	The referee identifies the offences and applies the Laws governing simultaneous or sequential offences, including their severity.
+136	"What if a player deliberately blocks an opponent who doesn't have the ball?"	Impeding without contact generally results in an indirect free kick; impeding with contact can result in a direct free kick.
+137	"What happens if someone spits at another player?"	Sending-off offence under IFAB.
+138	"Can a player yell to distract someone?"	Deliberate verbal distraction can be unsporting behaviour and may require a caution.
+139	"Can a player try a bicycle kick?"	Yes, if it doesn't endanger another player.
+140	"Why did you give a yellow card when the tackle wasn't intentional?"	Intent is not required for a reckless challenge to be cautionable.
+
+IFAB Law 12, Fouls and Misconduct. Review Law 12
+Section 13: Substitutions, equipment, and player eligibility
+#	Question	Correct answer
+141	"Can a player enter the field without the referee's permission?"	A substitute must follow the proper entry procedure. PDSA determines the applicable substitution windows.
+142	"Can a coach substitute a player while the ball is moving?"	Only if the competition's substitution procedure permits it.
+143	"Can players switch positions during play?"	Yes, with special procedures when changing goalkeepers.
+144	"Can a player play without shin guards?"	No. Shin guards are compulsory equipment.
+145	"Can a player wear earrings if they're covered with tape?"	No. Jewelry must be removed; tape doesn't make it permissible.
+146	"Can a player wear glasses?"	Potentially, if the equipment is safe. The referee evaluates safety and applicable competition rules.
+147	"Can a player wear a medical bracelet?"	Only if it complies with applicable safety requirements and the referee's assessment.
+148	"What if a player's shoe comes off during play?"	Play does not necessarily stop immediately. The player must correct the equipment as soon as possible, no later than the next stoppage; scoring immediately without it can still be valid.
+149	"Can a player wear a baseball cap?"	A goalkeeper may wear a cap. Other headgear must meet applicable equipment rules.
+150	"Can a player wear a cast or brace?"	Only if permitted by the competition and considered safe under the applicable equipment requirements.
+
+IFAB Laws 3 and 4. 
+IFAB
+
+Section 14: Unusual situations young referees encounter
+#	Question	Correct answer
+151	"What if the ball hits the referee?"	Usually play continues. However, certain outcomes—such as a change in possession while the ball remains on the field—require a dropped ball.
+152	"What if the ball hits the goalpost and comes back?"	Play continues if the ball remains in the field.
+153	"What if the ball hits the corner flag and stays in?"	Play continues.
+154	"What if a second ball rolls onto the field?"	Stop play if it interferes, remove it, and use the appropriate dropped-ball restart.
+155	"What if a spectator walks onto the field?"	Stop if the person interferes or creates a safety risk. Seek help from league personnel.
+156	"What if the goal falls over or becomes unsafe?"	Stop play and have it secured. Do not restart until safe.
+157	"Can a player leave the field to get around a defender?"	Yes, leaving temporarily as part of play is not automatically an offence.
+158	"Can a player deliberately kick the ball out so someone can receive treatment?"	Yes. It isn't automatically an offence. Restart according to how play stopped.
+159	"What if a team refuses to continue playing?"	Do not physically or verbally force participation. Involve the appropriate PDSA official and follow abandonment procedures.
+160	"What if a coach comes onto the field without permission?"	Follow the Laws for team officials entering the field, particularly if they interfere with play.
+161	"Can the referee change a call after the whistle?"	Sometimes, provided play has not restarted and Law 5 otherwise allows the correction.
+162	"What if the referee accidentally blows the whistle?"	Play has stopped. Restart with a dropped ball unless a different restart is required.
+163	"What if the game ball becomes flat?"	Stop when required, replace it, and use the appropriate restart.
+164	"What if the referee didn't see who touched the ball last?"	Consult an assistant referee if available. Make the best decision from available information; don't invent certainty.
+165	"Can a referee give a yellow card to a coach?"	Yes, for qualifying misconduct under IFAB and applicable competition rules.
+
+IFAB Laws 2, 5, 8, 9, and 12. 
+IFAB+1
+
+Section 15: Additional challenging questions from coaches and spectators
+#	Question	Correct answer
+166	"Can you penalize my player when the ball is already out?"	Misconduct can still be sanctioned, but the restart usually remains the one required when the ball left play.
+167	"Why didn't you call that foul against the goalkeeper?"	Goalkeepers have special handling protections but can otherwise commit ordinary fouls. Explain the specific decision.
+168	"Is every handball in the penalty area a penalty?"	No. First, an actual handball offence must occur, and it must be committed by the defending team under the applicable penalty-kick criteria.
+169	"Why is a tackle outside the penalty area only a free kick?"	A direct-free-kick offence committed outside the defender's penalty area results in a direct free kick, not a penalty.
+170	"Can a referee give a red card without first giving a yellow?"	Yes, for a sending-off offence.
+171	"Can a player score after the referee has blown the whistle?"	A goal cannot be scored once play has been stopped, unless the ball had already wholly crossed the goal line before the whistle.
+172	"What if two players from the same team accidentally collide?"	There is not automatically a foul. Stop for serious injury or another valid reason.
+173	"Can the referee stop the game because a parent is threatening a player or official?"	Yes. Safety takes priority, and responsible PDSA personnel should be involved.
+174	"Can a coach demand that a young referee be replaced?"	A coach cannot independently remove an appointed referee. Concerns should go through PDSA's appropriate officials and procedures.
+175	"What if I genuinely don't know the correct rule?"	Don't invent an answer. Consult the available official rules or an authorized referee mentor when possible, and report unresolved issues to the referee coordinator.
+
+Important 2026/27 rule update
+IFAB's 2026/27 Law 15 includes a five-second countdown procedure for a player unfairly delaying a throw-in, with the throw awarded to the opponents if the countdown expires. This is distinct from an ordinary incorrectly performed throw. 
+IFAB
+
+
+I would add that to AskRef as a separate versioned rule and verify whether and how PDSA has adopted it for its competitions.
+How I'd structure the completed AskRef question bank
+Expanded training bank
+175 questions
+
+Draft for validation
+
+General play, fouls, and offside
+
+28
+
+
+
+
+
+Restarts, goalkeepers, and coaches
+
+29
+
+
+
+
+
+Spectators and PDSA safety
+
+18
+
+
+
+
+
+Throw-in technical questions
+
+30
+
+
+
+
+
+Goal kicks, corners, and free kicks
+
+15
+
+
+
+
+
+Fouls and dangerous play
+
+20
+
+
+
+
+
+Equipment and substitutions
+
+10
+
+
+
+
+
+Unusual situations
+
+15
+
+
+
+
+
+Coach and spectator challenges
+
+10
+
+
+
+
+
+
+
+For the PDSA website, I would make each entry more than a simple question and answer. Each should contain the division, applicable rule, plain-English explanation, referee response, restart type and location, and whether the decision requires a caution, sending-off, or no disciplinary action.
+
+I would also include alternate phrasing so AskRef recognizes questions such as "His foot came up," "He lifted his back leg," "He jumped on the throw," and "Is that a foul throw?" as related questions.
+
+One remaining dependency: The PDSA Laws PDF linked from the official rules page needs to be checked before these 175 answers are published as authoritative PDSA guidance. That is especially important for U6–U10, where instructional restarts and age-specific procedures can differ from IFAB.
+
+With that validation, this would be a much more useful training and in-game reference for young PDSA referees, rather than just a general soccer FAQ.

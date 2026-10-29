@@ -1,0 +1,302 @@
+[
+  {
+    "number": 1,
+    "question": "Ref, why was that a foul?"
+  },
+  {
+    "number": 2,
+    "question": "But I got the ball first!"
+  },
+  {
+    "number": 3,
+    "question": "That was an accident!"
+  },
+  {
+    "number": 4,
+    "question": "The ball hit my hand. Why is that a foul?"
+  },
+  {
+    "number": 5,
+    "question": "Why didn't you call handball?"
+  },
+  {
+    "number": 6,
+    "question": "They pushed me!"
+  },
+  {
+    "number": 7,
+    "question": "Why didn't you blow your whistle?"
+  },
+  {
+    "number": 8,
+    "question": "Can I kick the ball while I'm on the ground?"
+  },
+  {
+    "number": 9,
+    "question": "Can I use my shoulder?"
+  },
+  {
+    "number": 10,
+    "question": "Why did you stop the game? I'm not hurt!"
+  },
+  {
+    "number": 11,
+    "question": "The ball touched the line. Isn't it out?"
+  },
+  {
+    "number": 12,
+    "question": "Why is that their throw-in?"
+  },
+  {
+    "number": 13,
+    "question": "What's wrong with my throw-in?"
+  },
+  {
+    "number": 14,
+    "question": "Can my foot be on the line?"
+  },
+  {
+    "number": 15,
+    "question": "Can I score directly from a throw-in?"
+  },
+  {
+    "number": 16,
+    "question": "Why is it a corner instead of a goal kick?"
+  },
+  {
+    "number": 17,
+    "question": "Do goal kicks have to leave the penalty area?"
+  },
+  {
+    "number": 18,
+    "question": "Do I have to wait for the whistle?"
+  },
+  {
+    "number": 19,
+    "question": "Can I score straight from a corner kick?"
+  },
+  {
+    "number": 20,
+    "question": "Why did you call that a double touch?"
+  },
+  {
+    "number": 21,
+    "question": "How was I offside?"
+  },
+  {
+    "number": 22,
+    "question": "But I wasn't offside when I received it!"
+  },
+  {
+    "number": 23,
+    "question": "I was standing offside but never touched the ball!"
+  },
+  {
+    "number": 24,
+    "question": "Can I be offside on a throw-in?"
+  },
+  {
+    "number": 25,
+    "question": "Can I be offside on a goal kick?"
+  },
+  {
+    "number": 26,
+    "question": "Can I be offside from a corner?"
+  },
+  {
+    "number": 27,
+    "question": "Can I be offside in my own half?"
+  },
+  {
+    "number": 28,
+    "question": "The defender touched the ball. Doesn't that cancel offside?"
+  },
+  {
+    "number": 29,
+    "question": "Ref, can I make a substitution?"
+  },
+  {
+    "number": 30,
+    "question": "Why won't you let my player back in?"
+  },
+  {
+    "number": 31,
+    "question": "Can we change goalkeepers?"
+  },
+  {
+    "number": 32,
+    "question": "Why wasn't that a penalty?"
+  },
+  {
+    "number": 33,
+    "question": "Why was that an indirect free kick?"
+  },
+  {
+    "number": 34,
+    "question": "How much time is left?"
+  },
+  {
+    "number": 35,
+    "question": "Can you add time for the injury?"
+  },
+  {
+    "number": 36,
+    "question": "Can you explain that call?"
+  },
+  {
+    "number": 37,
+    "question": "The other team has too many players!"
+  },
+  {
+    "number": 38,
+    "question": "Can we play with fewer players?"
+  },
+  {
+    "number": 39,
+    "question": "Why did you give my player a yellow card?"
+  },
+  {
+    "number": 40,
+    "question": "Can you change your decision?"
+  },
+  {
+    "number": 41,
+    "question": "Can I challenge that call?"
+  },
+  {
+    "number": 42,
+    "question": "Are you blind? That was a foul!"
+  },
+  {
+    "number": 43,
+    "question": "You need to call it both ways!"
+  },
+  {
+    "number": 44,
+    "question": "You missed an obvious handball!"
+  },
+  {
+    "number": 45,
+    "question": "You're letting them play too rough!"
+  },
+  {
+    "number": 46,
+    "question": "How old are you? You shouldn't be refereeing!"
+  },
+  {
+    "number": 47,
+    "question": "Why won't you explain the call to me?"
+  },
+  {
+    "number": 48,
+    "question": "That player is hurt! Stop the game!"
+  },
+  {
+    "number": 49,
+    "question": "The other team's parents are yelling at our kids!"
+  },
+  {
+    "number": 50,
+    "question": "I'm reporting you!"
+  },
+  {
+    "number": 51,
+    "question": "Can the goalkeeper pick up a pass from a teammate?"
+  },
+  {
+    "number": 52,
+    "question": "Can a goalkeeper pick up a ball thrown in by a teammate?"
+  },
+  {
+    "number": 53,
+    "question": "Can a goalkeeper use their hands outside the box?"
+  },
+  {
+    "number": 54,
+    "question": "Why did you call a corner when the goalkeeper held the ball?"
+  },
+  {
+    "number": 55,
+    "question": "Can players stand in front of the goalkeeper?"
+  },
+  {
+    "number": 56,
+    "question": "Does the goalkeeper have to stay on the goal line during a penalty?"
+  },
+  {
+    "number": 57,
+    "question": "Can the penalty taker stop during the run-up?"
+  },
+  {
+    "number": 58,
+    "question": "Why did we stop for lightning? It's not raining!"
+  },
+  {
+    "number": 59,
+    "question": "The lightning warning stopped. Can we start immediately?"
+  },
+  {
+    "number": 60,
+    "question": "Can we keep playing if the wind is strong?"
+  },
+  {
+    "number": 61,
+    "question": "Why are we stopping for water breaks?"
+  },
+  {
+    "number": 62,
+    "question": "Why can't we play on this wet field?"
+  },
+  {
+    "number": 63,
+    "question": "We were winning when the game stopped. Does the score count?"
+  },
+  {
+    "number": 64,
+    "question": "Who decides whether a suspended match gets rescheduled?"
+  },
+  {
+    "number": 65,
+    "question": "How many players are allowed on the field?"
+  },
+  {
+    "number": 66,
+    "question": "Are we playing with a goalkeeper?"
+  },
+  {
+    "number": 67,
+    "question": "Is there offside in our age group?"
+  },
+  {
+    "number": 68,
+    "question": "When can we substitute players?"
+  },
+  {
+    "number": 69,
+    "question": "How long are the halves or quarters?"
+  },
+  {
+    "number": 70,
+    "question": "Can players deliberately head the ball?"
+  },
+  {
+    "number": 71,
+    "question": "Do we use build-out lines?"
+  },
+  {
+    "number": 72,
+    "question": "Can the goalkeeper punt the ball?"
+  },
+  {
+    "number": 73,
+    "question": "What happens after an incorrect throw-in?"
+  },
+  {
+    "number": 74,
+    "question": "Can a player be sent off?"
+  },
+  {
+    "number": 75,
+    "question": "What happens when one team is winning by a lot?"
+  }
+]
