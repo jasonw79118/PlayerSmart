@@ -11,7 +11,8 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     testTimeout: 20000,
-    isolate: false,
+    // Local workspace stores and browser globals must not leak between test files.
+    isolate: true,
     setupFiles: ['./src/test-setup.ts'],
   },
 })
