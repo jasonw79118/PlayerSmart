@@ -42,7 +42,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build
+      # GitHub Pages cannot host the authenticated API. Forward to the full app.
+      - run: node -e "const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('hosting/github-pages.html','dist/index.html')"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
